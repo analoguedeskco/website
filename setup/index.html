@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to INDEX | Analogue Desk Co.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #111; line-height: 1.6; padding: 40px 20px; max-width: 600px; margin: 0 auto; background-color: #fdfdfd; }
-        h1 { font-weight: 800; letter-spacing: -1px; margin-bottom: 5px; }
-        h2 { font-weight: 600; font-size: 1.2rem; margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .subtitle { color: #666; font-size: 0.9rem; margin-bottom: 40px; }
-        .warning { background: #fff3cd; color: #856404; padding: 15px; border-radius: 4px; font-size: 0.9rem; margin: 20px 0; border: 1px solid #ffeeba; }
-        .step { margin-bottom: 20px; }
-        .step strong { display: block; font-size: 1.1rem; margin-bottom: 5px; }
-        .btn { display: block; width: 100%; text-align: center; background: #000; color: #fff; padding: 15px 0; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 30px; }
-        .footer { margin-top: 60px; font-size: 0.8rem; color: #999; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
+        body { font-family: 'Montserrat', sans-serif; color: #fff; line-height: 1.6; padding: 40px 20px; max-width: 600px; margin: 0 auto; background-color: #000; font-weight: 300; }
+        h1 { font-weight: 300; letter-spacing: 0.3em; margin-bottom: 10px; text-transform: uppercase; text-align: center; font-size: 1.5rem; margin-top: 30px; }
+        h2 { font-weight: 400; font-size: 0.9rem; margin-top: 40px; border-bottom: 1px solid #333; padding-bottom: 15px; text-transform: uppercase; letter-spacing: 0.2em; color: #999; }
+        .subtitle { color: #666; font-size: 0.7rem; margin-bottom: 50px; text-align: center; text-transform: uppercase; letter-spacing: 0.2em; }
+        .warning { background: #1a1a1a; color: #ccc; padding: 20px; font-size: 0.85rem; margin: 30px 0; border: 1px solid #333; text-align: justify; }
+        .step { margin-bottom: 30px; }
+        .step strong { display: block; font-size: 0.9rem; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; color: #fff; }
+        .btn { display: block; width: 100%; text-align: center; background: #fff; color: #000; padding: 15px 0; text-decoration: none; border-radius: 0; font-weight: 500; margin-top: 30px; letter-spacing: 0.1em; text-transform: uppercase; }
+        .footer { margin-top: 80px; font-size: 0.7rem; color: #444; text-align: center; border-top: 1px solid #222; padding-top: 30px; letter-spacing: 0.15em; }
+        .logo { width: 100%; margin-bottom: 20px; display: block; }
     </style>
 </head>
 <body>
+    <img src="logo_1_line.png" alt="Analogue Desk Co." class="logo">
     <h1>INDEX-01</h1>
     <p class="subtitle">Batch 001 / Owner's Guide</p>
 
@@ -24,12 +27,12 @@
 
     <h2>Quick Start</h2>
 
-    <p>The microprocessor inside your INDEX-01 is small and efficient. Please allow it time to wake up and load web pages.</p>
+    <div class="warning">The microprocessor inside your INDEX-01 is small and efficient. Please allow it time to wake up and load web pages.</div>
     
     <div class="step">
         <strong>1. Power Up</strong>
-        Plug the device into a standard USB-C port (5V).
-        <div class="warning">⚠️ Use a standard 5V adapter or computer port.</div>
+        Plug the device into a standard USB-C power supply.
+        After a few seconds the device will begin an initialisation process.
     </div>
 
     <div class="step">
@@ -57,8 +60,8 @@
     <!-- <a href="https://github.com/your-username/index-01-docs" class="btn">View Full Digital Manual</a> -->
 
     <div class="footer">
-        &copy; 2026 Analogue Desk Co. <br>
-        <a href="mailto:hello@analoguedesk.co" style="color:#666;">hello@analoguedesk.co</a>
+        <span style="text-transform: uppercase;">&copy; 2026 Analogue Desk Co.</span> <br>
+        <a href="mailto:hello@analoguedesk.co" style="color:#999;">hello@analoguedesk.co</a>
     </div>
 </body>
 </html>
