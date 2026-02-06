@@ -6,16 +6,17 @@
     <title>Welcome to INDEX | Analogue Desk Co.</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Montserrat', sans-serif; color: #fff; line-height: 1.6; padding: 40px 20px; max-width: 600px; margin: 0 auto; background-color: #000; font-weight: 300; }
+        body { font-family: 'Montserrat', sans-serif; color: #fff; line-height: 1.6; padding: 40px 20px; max-width: 600px; margin: 0 auto; background-color: #000; font-weight: 400; }
         h1 { font-weight: 300; letter-spacing: 0.3em; margin-bottom: 10px; text-transform: uppercase; text-align: center; font-size: 1.5rem; margin-top: 30px; }
         h2 { font-weight: 400; font-size: 0.9rem; margin-top: 40px; border-bottom: 1px solid #333; padding-bottom: 15px; text-transform: uppercase; letter-spacing: 0.2em; color: #999; }
-        .subtitle { color: #666; font-size: 0.7rem; margin-bottom: 50px; text-align: center; text-transform: uppercase; letter-spacing: 0.2em; }
-        .warning { background: #1a1a1a; color: #ccc; padding: 20px; font-size: 0.85rem; margin: 30px 0; border: 1px solid #333; text-align: justify; }
+        .subtitle { color: #666; font-size: 0.9rem; margin-bottom: 50px; text-align: center; text-transform: uppercase; letter-spacing: 0.2em; }
         .step { margin-bottom: 30px; }
         .step strong { display: block; font-size: 0.9rem; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; color: #fff; }
         .btn { display: block; width: 100%; text-align: center; background: #fff; color: #000; padding: 15px 0; text-decoration: none; border-radius: 0; font-weight: 500; margin-top: 30px; letter-spacing: 0.1em; text-transform: uppercase; }
         .footer { margin-top: 80px; font-size: 0.7rem; color: #444; text-align: center; border-top: 1px solid #222; padding-top: 30px; letter-spacing: 0.15em; }
         .logo { width: 100%; margin-bottom: 20px; display: block; }
+        code, a { color: #89CFF0; }
+        code { font-size: 1.2em; }
     </style>
 </head>
 <body>
@@ -23,41 +24,63 @@
     <h1>INDEX-01</h1>
     <p class="subtitle">Batch 001 / Owner's Guide</p>
 
-    <p>Thank you for backing independent UK design. Your device has been hand-assembled in London.</p>
+    <p>Thank you for backing independent UK design.</p>
 
     <h2>Quick Start</h2>
-
-    <div class="warning">The microprocessor inside your INDEX-01 is small and efficient. Please allow it time to wake up and load web pages.</div>
     
     <div class="step">
-        <strong>1. Power Up</strong>
-        Plug the device into a standard USB-C power supply.
-        After a few seconds the device will begin an initialisation process.
+        <strong>1. Power up for the first time</strong>
+        Plug INDEX into a standard 5v USB-C power supply using the rear USB socket.
+        <br>
+        <br>
+        INDEX will glow white, then blue. Blue indicates it's ready for WiFi setup. 
     </div>
 
     <div class="step">
-        <strong>2. Connect</strong>
-        On your phone or computer, join the WiFi network named <code>INDEX-SETUP</code>.
-        A window should open automatically. If not, visit <code>http://192.168.4.1</code> in your browser.
+        <strong>2. Connect to temporary WiFi access point</strong>
+        INDEX will create a temporary WiFi network for configuration.
+        <br>
+        <br>
+        On your phone or computer, join the WiFi network named <code>INDEX-01-setup</code>.
+        A window should open automatically. If not, visit <a href="http://192.168.4.1">http://192.168.4.1</a> in your browser.
+        Use the password: <code>analoguedeskco</code>
     </div>
 
     <div class="step">
         <strong>3. Configure WiFi</strong>
-        In the WiFiManager page, enter your WiFi details. The page will close as the device connects to WiFi..-
+        In the WiFiManager page, choose <code>CONFIGURE WIFI</code>, select your SSID from the list and enter your WiFi password. Click Save.
+        The page will close as INDEX connects to your WiFi.
+        <br><br>
+        INDEX will now glow light blue (connecting to WiFi) and green (needle initialising).
     </div>
 
     <div class="step">
-        <strong>4. Access the INDEX-01 Interface</strong>
-        Find the device's IP address in your router's connected devices list, then enter it into your browser to access the full configuration interface.
+        <strong>4. Access INDEX Dashboard</strong>
+        Ensure your phone/computer is back on your main WiFi network.
+        <br>
+        Wait 30 seconds for INDEX to complete its initialisation.
+        <br>
+        Visit <a href="http://index.local">http://index.local</a> in your browser (assuming you've not changed the device name).
+        <br>
+        If it doesn't load, wait a few minutes and try again.
+        <br>
+        <span style="color: #bbb; font-size: 0.85rem;">
+            <strong>Backup Option:</strong> If it still doesn't load, find INDEX's assigned IP address using your router admin page or a network scanner (like <a href="https://www.fing.com/">Fing</a>). Look for "INDEX-01" or "Espressif". Enter it into a browser address bar. 
+        </span>
     </div>
 
     <div class="step">
         <strong>5. Configure INDEX-01</strong>
-        Select `Configure Mode` to choose what the INDEX-01 should track.
+        By default, INDEX-01 is set to track the current time.
+        <br>
+        <br>
+        Select <code>MODE</code> to choose what the INDEX-01 should track.
+        <br><br>
+        Select <code>AMBIENCE</code> to adjust the lighting effect.
     </div>
 
     
-    <!-- <a href="https://github.com/your-username/index-01-docs" class="btn">View Full Digital Manual</a> -->
+    <a href="https://analoguedesk.co/docs" class="btn">View Full Digital Manual</a>
 
     <div class="footer">
         <span style="text-transform: uppercase;">&copy; 2026 Analogue Desk Co.</span> <br>
