@@ -19,3 +19,10 @@ p.main-text { margin-bottom: 20px; }
 .product-link a:hover span { border-bottom-color: #fff; }
 .gallery { margin-top: 40px; }
 .gallery img { width: 100%; margin-bottom: 20px; display: block; }
+.footer-link { text-decoration: none; color: #999; text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; margin-bottom: 20px; transition: color 0.3s ease; }
+.footer-link:hover { color: #fff; }
+.footer-copy { text-transform: uppercase; }
+.footer-email { color: #999; transition: color 0.3s ease; }
+.footer-email:hover { color: #fff; }
+.hero-image { width: 100%; display: block; margin-bottom: 30px; }
+.mb-30 { margin-bottom: 30px !important; }
