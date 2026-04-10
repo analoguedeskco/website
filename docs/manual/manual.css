@@ -1,0 +1,92 @@
+/* Manual-specific styles — layered on top of style.css */
+
+body {
+    max-width: 800px;
+}
+
+/* Section headings */
+h3 {
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #ccc;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Section dividers */
+hr {
+    border: none;
+    border-top: 1px solid #222;
+    margin: 40px 0;
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 1.5em;
+    color: #ccc;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+li strong {
+    color: #fff;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.85rem;
+}
+
+th {
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    color: #666;
+    border-bottom: 1px solid #333;
+    padding: 8px 12px 8px 0;
+}
+
+td {
+    border-bottom: 1px solid #1a1a1a;
+    padding: 10px 12px 10px 0;
+    color: #ccc;
+}
+
+td strong {
+    color: #fff;
+}
+
+/* Inline code */
+code {
+    background: #111;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    border: 1px solid #222;
+}
+
+/* Manual header block (model/batch/date) */
+p strong {
+    color: #fff;
+}
+
+/* Images */
+.manual-content img {
+    width: 100%;
+    display: block;
+    margin: 30px 0;
+}
+
+/* Download link */
+.manual-download {
+    text-align: center;
+    margin: 40px 0;
+}
