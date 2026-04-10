@@ -123,4 +123,5 @@ IDX-1 is built on an open architecture.
 | Button | Reset | GPIO 09 |
 
 ---
-**Support:** hello@analoguedesk.co | support@analoguedesk.co
+**Support:** 
+support@analoguedesk.co
