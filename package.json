@@ -1,0 +1,11 @@
+{
+  "name": "analoguedeskco-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "bash build.sh"
+  },
+  "dependencies": {
+    "marked": "^15.0.0"
+  }
+}
