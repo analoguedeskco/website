@@ -4,7 +4,7 @@
 **Batch:** 001  
 **Date:** 2026-03-29
 
-![IDX-1](images/IDX-1_black_pcb_square.jpg)
+![IDX-1](../images/IDX-1_black_pcb_square.jpg)
 
 ---
 

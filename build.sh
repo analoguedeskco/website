@@ -7,7 +7,7 @@ echo "Building site to docs/..."
 
 # Clean and create output structure
 rm -rf "$ROOT/docs"
-mkdir -p "$ROOT/docs/images" "$ROOT/docs/manual/images" "$ROOT/docs/setup"
+mkdir -p "$ROOT/docs/images" "$ROOT/docs/manual" "$ROOT/docs/setup"
 
 # Static files
 cp "$ROOT/CNAME"      "$ROOT/docs/"
