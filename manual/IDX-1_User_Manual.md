@@ -11,7 +11,7 @@
 ## 01 / THE CONCEPT
 IDX-1 bridges the gap between the ephemeral nature of digital data and the tactile permanence of instrumentation. Whether tracking market volatility or environmental signals, you now have a physical anchor for your most important data.
 
-Thank you for acquiring a unit from **Batch 001**, the Founder’s Batch. We believe in open architecture.
+We believe in open architecture.
 
 ---
 
@@ -124,4 +124,5 @@ IDX-1 is built on an open architecture.
 
 ---
 **Support:** 
+
 support@analoguedesk.co
