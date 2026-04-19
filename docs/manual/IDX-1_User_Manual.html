@@ -15,7 +15,7 @@
     </a>
     <div class="manual-content">
 <h1>IDX-1 / User Manual</h1>
-<p><strong>Model:</strong> IDX-1<br><strong>Batch:</strong> 001<br><strong>Date:</strong> 2026-03-29</p>
+<p><strong>Model:</strong> IDX-1<br><strong>Batch:</strong> 001<br><strong>Date:</strong> 2026-04-20</p>
 <p><img src="../images/IDX-1_black_pcb_square.jpg" alt="IDX-1"></p>
 <hr>
 <h2>01 / THE CONCEPT</h2>
@@ -178,6 +178,11 @@
 <td align="left">GPIO 09</td>
 </tr>
 </tbody></table>
+<h3>ESPHOME</h3>
+<p>IDX-1 supports <a href="https://esphome.io">ESPHome</a> as an alternative firmware, giving full control to Home Assistant.</p>
+<p>The ESPHome configuration files required to build the firmware binary are available at <a href="https://github.com/analoguedeskco/esphome">github.com/analoguedeskco/esphome</a>. Compile these using the ESPHome dashboard or CLI to produce a <code>.bin</code>, then flash via USB-C. The GPIO pin mapping above applies directly to the configuration.</p>
+<p>Once flashed, IDX-1 appears as a native Home Assistant device — the needle and LEDs are exposed as standard entities and can be driven by any HA automation.</p>
+<p>To switch back to the stock firmware, contact support (see below).</p>
 <hr>
 <p><strong>Support:</strong> </p>
 <p><a href="mailto:support@analoguedesk.co">support@analoguedesk.co</a></p>

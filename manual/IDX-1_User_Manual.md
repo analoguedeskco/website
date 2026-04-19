@@ -2,7 +2,7 @@
 
 **Model:** IDX-1  
 **Batch:** 001  
-**Date:** 2026-03-29
+**Date:** 2026-04-20
 
 ![IDX-1](../images/IDX-1_black_pcb_square.jpg)
 
@@ -121,6 +121,16 @@ IDX-1 is built on an open architecture.
 | Stepper Motor | Coil B (2) | GPIO 07 |
 | RGB LEDs | Data | GPIO 08 |
 | Button | Reset | GPIO 09 |
+
+### ESPHOME
+
+IDX-1 supports [ESPHome](https://esphome.io) as an alternative firmware, giving full control to Home Assistant.
+
+The ESPHome configuration files required to build the firmware binary are available at [github.com/analoguedeskco/esphome](https://github.com/analoguedeskco/esphome). Compile these using the ESPHome dashboard or CLI to produce a `.bin`, then flash via USB-C. The GPIO pin mapping above applies directly to the configuration.
+
+Once flashed, IDX-1 appears as a native Home Assistant device — the needle and LEDs are exposed as standard entities and can be driven by any HA automation.
+
+To switch back to the stock firmware, contact support (see below).
 
 ---
 **Support:** 
