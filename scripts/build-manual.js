@@ -3,10 +3,10 @@ const path = require('path');
 const { marked } = require('marked');
 
 const ROOT = path.join(__dirname, '..');
-const mdSource  = path.join(ROOT, 'manual', 'IDX-1_User_Manual.md');
+const mdSource  = path.join(ROOT, 'manual', 'IDX-2_User_Manual.md');
 const cssSource = path.join(ROOT, 'manual', 'manual.css');
 const outputDir = path.join(ROOT, 'docs', 'manual');
-const outputHtml = path.join(outputDir, 'IDX-1_User_Manual.html');
+const outputHtml = path.join(outputDir, 'IDX-2_User_Manual.html');
 const outputCss  = path.join(outputDir, 'manual.css');
 
 fs.mkdirSync(outputDir, { recursive: true });
@@ -19,7 +19,7 @@ const html = `<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDX-1 User Manual | Analogue Desk Co.</title>
+    <title>IDX-2 User Manual | Analogue Desk Co.</title>
     <link rel="icon" href="../favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">

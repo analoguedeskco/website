@@ -4,7 +4,7 @@ $ROOT = $PSScriptRoot
 Write-Host "Building site to docs/..."
 
 # Clean and create output structure
-if (Test-Path "$ROOT\docs") { Remove-Item "$ROOT\docs" -Recurse -Force }
+# if (Test-Path "$ROOT\docs") { Remove-Item "$ROOT\docs" -Recurse -Force }
 New-Item -ItemType Directory -Path "$ROOT\docs\images", "$ROOT\docs\manual", "$ROOT\docs\setup" -Force | Out-Null
 
 # Static files
