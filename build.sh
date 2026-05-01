@@ -15,7 +15,7 @@ cp "$ROOT/favicon.png" "$ROOT/docs/"
 cp "$ROOT/style.css"  "$ROOT/docs/"
 cp "$ROOT/index.html" "$ROOT/docs/"
 cp "$ROOT/images/"*   "$ROOT/docs/images/"
-cp "$ROOT/setup/index.html" "$ROOT/docs/setup/"
+cp "$ROOT/setup/"*.html "$ROOT/docs/setup/"
 
 # Manual index page
 cp "$ROOT/manual/index.html" "$ROOT/docs/manual/"

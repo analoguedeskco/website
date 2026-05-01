@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npm --version)",
       "Bash(npm install:*)",
-      "Bash(bash build.sh)"
+      "Bash(bash build.sh)",
+      "Bash(pwsh -File ./build.ps1)"
     ]
   }
 }

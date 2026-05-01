@@ -3,23 +3,24 @@ const path = require('path');
 const { marked } = require('marked');
 
 const ROOT = path.join(__dirname, '..');
-const mdSource  = path.join(ROOT, 'manual', 'IDX-2_User_Manual.md');
-const cssSource = path.join(ROOT, 'manual', 'manual.css');
+const manualDir = path.join(ROOT, 'manual');
+const cssSource = path.join(manualDir, 'manual.css');
 const outputDir = path.join(ROOT, 'docs', 'manual');
-const outputHtml = path.join(outputDir, 'IDX-2_User_Manual.html');
-const outputCss  = path.join(outputDir, 'manual.css');
 
 fs.mkdirSync(outputDir, { recursive: true });
 
-const md = fs.readFileSync(mdSource, 'utf8');
-const content = marked.parse(md);
+const manuals = ['IDX-1_User_Manual', 'IDX-2_User_Manual'];
 
-const html = `<!DOCTYPE html>
+for (const name of manuals) {
+    const md = fs.readFileSync(path.join(manualDir, `${name}.md`), 'utf8');
+    const content = marked.parse(md);
+
+    const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDX-2 User Manual | Analogue Desk Co.</title>
+    <title>IDX User Manual | Analogue Desk Co.</title>
     <link rel="icon" href="../favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
@@ -41,8 +42,11 @@ ${content}
 </body>
 </html>`;
 
-fs.writeFileSync(outputHtml, html);
-fs.copyFileSync(cssSource, outputCss);
+    const outputHtml = path.join(outputDir, `${name}.html`);
+    fs.writeFileSync(outputHtml, html);
+    console.log('  manual HTML →', path.relative(ROOT, outputHtml));
+}
 
-console.log('  manual HTML →', path.relative(ROOT, outputHtml));
+const outputCss = path.join(outputDir, 'manual.css');
+fs.copyFileSync(cssSource, outputCss);
 console.log('  manual CSS  →', path.relative(ROOT, outputCss));

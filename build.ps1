@@ -13,7 +13,7 @@ Copy-Item "$ROOT\favicon.png" "$ROOT\docs\"
 Copy-Item "$ROOT\style.css"   "$ROOT\docs\"
 Copy-Item "$ROOT\index.html"  "$ROOT\docs\"
 Copy-Item "$ROOT\images\*"    "$ROOT\docs\images\"
-Copy-Item "$ROOT\setup\index.html" "$ROOT\docs\setup\"
+Copy-Item "$ROOT\setup\*.html" "$ROOT\docs\setup\"
 
 # Manual index page
 Copy-Item "$ROOT\manual\index.html" "$ROOT\docs\manual\"
