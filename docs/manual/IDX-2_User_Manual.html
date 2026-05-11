@@ -34,9 +34,9 @@
 <h2>03 / SETUP WIFI</h2>
 <ol>
 <li><strong>Power On:</strong> Connect the USB-C cable. The device will glow <strong>deep blue</strong>, indicating it is ready for setup.</li>
-<li><strong>Access Point:</strong> On your smartphone or laptop, connect to the WiFi network named <code>IDX_setup</code>.</li>
+<li><strong>Access Point:</strong> On your smartphone or laptop, connect to the WiFi network named <code>IDX-setup</code>.</li>
 <li><strong>Portal:</strong> A configuration page should open automatically. If not, navigate to <code>http://192.168.4.1</code>.</li>
-<li><strong>Password:</strong> Use <code>analoguedeskco</code>.</li>
+<li><strong>Password:</strong> Use <code>analoguedeskco</code> if challenged.</li>
 <li><strong>Credentials:</strong> Select your home WiFi and enter your password.</li>
 <li><strong>IP Address:</strong> Once connected, the device will display its local IP address. <strong>Copy this address</strong> for step 05.</li>
 <li><strong>Finish:</strong> Press the button to begin initialisation.</li>
@@ -56,7 +56,8 @@
 <ol>
 <li>Paste the <strong>IP Address</strong> from Step 03 into your browser.</li>
 <li>Create a bookmark for future convenience.</li>
-<li><strong>Dashboard Sections:</strong><ul>
+<li>Dashboard Sections:<ul>
+<li><strong>QUICK START:</strong> Several pre-configured pairs of mode and ambience.</li>
 <li><strong>MODE:</strong> Select a data source.</li>
 <li><strong>AMBIENCE:</strong> Modify LED effects and night mode.</li>
 <li><strong>ADVANCED:</strong> Diagnostics and reset options.</li>
@@ -64,8 +65,8 @@
 </li>
 </ol>
 <hr>
-<h2>06 / MODES &amp; TRACKING</h2>
-<p>Choose what data IDX-2 references. Key modes include:</p>
+<h2>06 / MODE</h2>
+<p>Choose what data source IDX-2 references. Key modes include:</p>
 <ul>
 <li><strong>Air Quality Index (AQI):</strong> Based on your city location.</li>
 <li><strong>Crypto (Fear &amp; Greed / Price):</strong> Options for Alt.me or CoinMarketCap (CMC API key required for CMC modes).</li>
@@ -91,7 +92,7 @@
 </thead>
 <tbody><tr>
 <td align="left"><strong>Static</strong></td>
-<td align="left">A single unchanging colour.</td>
+<td align="left">A single unchanging colour of your choice.</td>
 </tr>
 <tr>
 <td align="left"><strong>Pulse</strong></td>
@@ -115,7 +116,11 @@
 </tr>
 <tr>
 <td align="left"><strong>Sentiment</strong></td>
-<td align="left">Red (left), White (center), Green (right). Best for market trackers.</td>
+<td align="left">Red (left), Green (right). Best for market trackers. Colours can be adjusted.</td>
+</tr>
+<tr>
+<td align="left"><strong>Alert</strong></td>
+<td align="left">White, until a threshold is reached, then red</td>
 </tr>
 </tbody></table>
 <hr>
@@ -124,14 +129,14 @@
 <li><strong>Pointer Calibration:</strong> If misaligned, set Mode to &quot;Off&quot; and tweak by +/- 10° until pointing at 12 o&#39;clock position.</li>
 <li><strong>Timezone:</strong> Adjust to ensure Night Mode operates correctly.</li>
 <li><strong>OTA Updates:</strong> Firmware can be updated via the Advanced page (ElegantOTA).</li>
-<li><strong>Hardware Reset:</strong> Cycle power 3 times, turning it off specifically during the <strong>White</strong> phase. The device will glow <strong>Magenta</strong> when reset is complete.</li>
+<li><strong>Hardware Reset:</strong> Cycle power 3 times, turning it off specifically during the <strong>White</strong> phase. The device will glow <strong>Magenta</strong> when reset is complete. It will turn blue and be ready for Wifi configuration.</li>
 </ul>
 <hr>
 <h2>09 / CARE &amp; MAINTENANCE</h2>
 <ul>
 <li><strong>Cleaning:</strong> Use only a dry microfibre cloth.</li>
 <li><strong>Warning:</strong> <strong>Do not use isopropyl alcohol or glass cleaners</strong>, as they cause &quot;crazing&quot; in the acrylic.</li>
-<li><strong>Hardware:</strong> Periodically check that M3 corner bolts are finger-tight.</li>
+<li><strong>Hardware:</strong> Periodically check that M3 corner bolts are finger-tight. Do not overtighten.</li>
 </ul>
 <hr>
 <h2>10 / DEVELOPER SPECIFICATIONS</h2>
@@ -184,7 +189,7 @@
 </tbody></table>
 <h3>ESPHOME</h3>
 <p>IDX-2 supports <a href="https://esphome.io">ESPHome</a> as an alternative firmware, giving full control to Home Assistant.</p>
-<p>The ESPHome configuration files required to build the firmware binary are available at <a href="https://github.com/analoguedeskco/esphome">github.com/analoguedeskco/esphome</a>. Compile these using the ESPHome dashboard or CLI to produce a <code>.bin</code>, then flash via USB-C. The GPIO pin mapping above applies directly to the configuration.</p>
+<p>The ESPHome configuration files required to build the firmware binary are available at <a href="https://github.com/analoguedeskco/esphome">github.com/analoguedeskco/esphome</a>. Compile these using the ESPHome dashboard or CLI to produce a <code>.bin</code>, then flash via <a href="https://web.esphome.io/">web.esphome.io</a></p>
 <p>Once flashed, IDX-2 appears as a native Home Assistant device — the needle and LEDs are exposed as standard entities and can be driven by any HA automation.</p>
 <p>To switch back to the stock firmware, contact support (see below).</p>
 <hr>

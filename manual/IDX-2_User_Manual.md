@@ -27,9 +27,9 @@ Before powering the device for the first time, please note:
 
 ## 03 / SETUP WIFI
 1.  **Power On:** Connect the USB-C cable. The device will glow **deep blue**, indicating it is ready for setup.
-2.  **Access Point:** On your smartphone or laptop, connect to the WiFi network named `IDX_setup`.
+2.  **Access Point:** On your smartphone or laptop, connect to the WiFi network named `IDX-setup`.
 3.  **Portal:** A configuration page should open automatically. If not, navigate to `http://192.168.4.1`.
-4.  **Password:** Use `analoguedeskco`.
+4.  **Password:** Use `analoguedeskco` if challenged.
 5.  **Credentials:** Select your home WiFi and enter your password.
 6.  **IP Address:** Once connected, the device will display its local IP address. **Copy this address** for step 05.
 7.  **Finish:** Press the button to begin initialisation.
@@ -51,15 +51,16 @@ Access the internal dashboard via your web browser to customize your device.
 
 1.  Paste the **IP Address** from Step 03 into your browser.
 2.  Create a bookmark for future convenience.
-3.  **Dashboard Sections:**
+3.  Dashboard Sections:
+    * **QUICK START:** Several pre-configured pairs of mode and ambience.
     * **MODE:** Select a data source.
     * **AMBIENCE:** Modify LED effects and night mode.
     * **ADVANCED:** Diagnostics and reset options.
 
 ---
 
-## 06 / MODES & TRACKING
-Choose what data IDX-2 references. Key modes include:
+## 06 / MODE
+Choose what data source IDX-2 references. Key modes include:
 
 * **Air Quality Index (AQI):** Based on your city location.
 * **Crypto (Fear & Greed / Price):** Options for Alt.me or CoinMarketCap (CMC API key required for CMC modes).
@@ -79,13 +80,14 @@ We recommend long **CYCLE DURATIONS** (e.g., 600 seconds) for maximum calm.
 
 | Theme | Effect |
 | :--- | :--- |
-| **Static** | A single unchanging colour. |
+| **Static** | A single unchanging colour of your choice. |
 | **Pulse** | Slowly undulating; like breathing. |
 | **Glacial** | Breathless whites and ice blues. |
 | **Aurora** | Electromagnetic storms of green and blue. |
 | **Nebula** | Deep space in blue and purple. |
 | **Sunset** | Soothing end-of-day colours. |
-| **Sentiment** | Red (left), White (center), Green (right). Best for market trackers. |
+| **Sentiment** | Red (left), Green (right). Best for market trackers. Colours can be adjusted. |
+| **Alert** | White, until a threshold is reached, then red |
 
 ---
 
@@ -93,14 +95,14 @@ We recommend long **CYCLE DURATIONS** (e.g., 600 seconds) for maximum calm.
 * **Pointer Calibration:** If misaligned, set Mode to "Off" and tweak by +/- 10° until pointing at 12 o'clock position.
 * **Timezone:** Adjust to ensure Night Mode operates correctly.
 * **OTA Updates:** Firmware can be updated via the Advanced page (ElegantOTA).
-* **Hardware Reset:** Cycle power 3 times, turning it off specifically during the **White** phase. The device will glow **Magenta** when reset is complete.
+* **Hardware Reset:** Cycle power 3 times, turning it off specifically during the **White** phase. The device will glow **Magenta** when reset is complete. It will turn blue and be ready for Wifi configuration.
 
 ---
 
 ## 09 / CARE & MAINTENANCE
 * **Cleaning:** Use only a dry microfibre cloth.
 * **Warning:** **Do not use isopropyl alcohol or glass cleaners**, as they cause "crazing" in the acrylic.
-* **Hardware:** Periodically check that M3 corner bolts are finger-tight.
+* **Hardware:** Periodically check that M3 corner bolts are finger-tight. Do not overtighten.
 
 ---
 
@@ -127,7 +129,7 @@ IDX-2 is built on an open architecture.
 
 IDX-2 supports [ESPHome](https://esphome.io) as an alternative firmware, giving full control to Home Assistant.
 
-The ESPHome configuration files required to build the firmware binary are available at [github.com/analoguedeskco/esphome](https://github.com/analoguedeskco/esphome). Compile these using the ESPHome dashboard or CLI to produce a `.bin`, then flash via USB-C. The GPIO pin mapping above applies directly to the configuration.
+The ESPHome configuration files required to build the firmware binary are available at [github.com/analoguedeskco/esphome](https://github.com/analoguedeskco/esphome). Compile these using the ESPHome dashboard or CLI to produce a `.bin`, then flash via [web.esphome.io](https://web.esphome.io/)
 
 Once flashed, IDX-2 appears as a native Home Assistant device — the needle and LEDs are exposed as standard entities and can be driven by any HA automation.
 
