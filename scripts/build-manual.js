@@ -13,7 +13,10 @@ const manuals = ['IDX-1_User_Manual', 'IDX-2_User_Manual'];
 
 for (const name of manuals) {
     const md = fs.readFileSync(path.join(manualDir, `${name}.md`), 'utf8');
-    const content = marked.parse(md);
+    const content = marked.parse(md).replace(/<h([1-6])>([^<]+)<\/h\1>/g, (_, level, text) => {
+        const id = text.toLowerCase().trim().replace(/[^\w]+/g, '-').replace(/^-|-$/g, '');
+        return `<h${level} id="${id}">${text}</h${level}>`;
+    });
 
     const html = `<!DOCTYPE html>
 <html lang="en">

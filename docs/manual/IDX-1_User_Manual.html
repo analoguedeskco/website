@@ -14,15 +14,15 @@
         <img src="../images/logo_1_line.png" alt="Analogue Desk Co." class="logo">
     </a>
     <div class="manual-content">
-<h1>IDX-1 / User Manual</h1>
+<h1 id="idx-1-user-manual">IDX-1 / User Manual</h1>
 <p><strong>Model:</strong> IDX-1<br><strong>Batch:</strong> 001<br><strong>Date:</strong> 2026-04-20</p>
 <p><img src="../images/IDX-1_black_pcb_square.jpg" alt="IDX-1"></p>
 <hr>
-<h2>01 / THE CONCEPT</h2>
+<h2 id="01-the-concept">01 / THE CONCEPT</h2>
 <p>IDX-1 bridges the gap between the ephemeral nature of digital data and the tactile permanence of instrumentation. Whether tracking market volatility or environmental signals, you now have a physical anchor for your most important data.</p>
 <p>We believe in open architecture.</p>
 <hr>
-<h2>02 / PRE-FLIGHT CHECK</h2>
+<h2 id="02-pre-flight-check">02 / PRE-FLIGHT CHECK</h2>
 <p>Before powering the device for the first time, please note:</p>
 <ul>
 <li><strong>Power Input:</strong> Use the provided USB-C cable. Connect to a standard 5V DC (0.5A) USB power source.</li>
@@ -31,7 +31,7 @@
 <li><strong>Safety:</strong> Consult and retain the supplied safety information.</li>
 </ul>
 <hr>
-<h2>03 / SETUP WIFI</h2>
+<h2 id="03-setup-wifi">03 / SETUP WIFI</h2>
 <ol>
 <li><strong>Power On:</strong> Connect the USB-C cable. The device will glow <strong>deep blue</strong>, indicating it is ready for setup.</li>
 <li><strong>Access Point:</strong> On your smartphone or laptop, connect to the WiFi network named <code>IDX-1_setup</code>.</li>
@@ -42,7 +42,7 @@
 <li><strong>Finish:</strong> Press the button to begin initialisation.</li>
 </ol>
 <hr>
-<h2>04 / INITIALISATION</h2>
+<h2 id="04-initialisation">04 / INITIALISATION</h2>
 <p>IDX-1 will cycle through several phases indicated by color:</p>
 <ul>
 <li><strong>WHITE (5s):</strong> Reset mode (Factory reset can be triggered here).</li>
@@ -51,7 +51,7 @@
 <li><strong>ACTIVE:</strong> The device enters operating mode (Default: Clock mode / Glacier ambience).</li>
 </ul>
 <hr>
-<h2>05 / CONFIGURATION</h2>
+<h2 id="05-configuration">05 / CONFIGURATION</h2>
 <p>Access the internal dashboard via your web browser to customize your device.</p>
 <ol>
 <li>Paste the <strong>IP Address</strong> from Step 03 into your browser.</li>
@@ -64,7 +64,7 @@
 </li>
 </ol>
 <hr>
-<h2>06 / MODES &amp; TRACKING</h2>
+<h2 id="06-modes-amp-tracking">06 / MODES &amp; TRACKING</h2>
 <p>Choose what data IDX-1 references. Key modes include:</p>
 <ul>
 <li><strong>Air Quality Index (AQI):</strong> Based on your city location.</li>
@@ -73,14 +73,14 @@
 <li><strong>Home Assistant:</strong> Displays any numeric entity state from your local instance.</li>
 <li><strong>Pomodoro:</strong> Physical countdown timer.</li>
 </ul>
-<h3>Tracking Styles</h3>
+<h3 id="tracking-styles">Tracking Styles</h3>
 <ul>
 <li><strong>Relative:</strong> The center represents zero change (e.g., Stocks/Crypto 24h trends).</li>
 <li><strong>Absolute:</strong> Maps to a fixed 0–100 scale (e.g., AQI or Fear &amp; Greed).</li>
 <li><strong>Focus:</strong> Tangible sweep toward task completion.</li>
 </ul>
 <hr>
-<h2>07 / AMBIENCE</h2>
+<h2 id="07-ambience">07 / AMBIENCE</h2>
 <p>We recommend long <strong>CYCLE DURATIONS</strong> (e.g., 600 seconds) for maximum calm.</p>
 <table>
 <thead>
@@ -115,7 +115,7 @@
 </tr>
 </tbody></table>
 <hr>
-<h2>08 / ADVANCED &amp; TROUBLESHOOTING</h2>
+<h2 id="08-advanced-amp-troubleshooting">08 / ADVANCED &amp; TROUBLESHOOTING</h2>
 <ul>
 <li><strong>Pointer Calibration:</strong> If misaligned, set Mode to &quot;Off&quot; and tweak by +/- 10°.</li>
 <li><strong>Timezone:</strong> Adjust to ensure Night Mode operates correctly.</li>
@@ -123,14 +123,14 @@
 <li><strong>Hardware Reset:</strong> Cycle power 3 times, turning it off specifically during the <strong>White</strong> phase. The device will glow <strong>Magenta</strong> when reset is complete.</li>
 </ul>
 <hr>
-<h2>09 / CARE &amp; MAINTENANCE</h2>
+<h2 id="09-care-amp-maintenance">09 / CARE &amp; MAINTENANCE</h2>
 <ul>
 <li><strong>Cleaning:</strong> Use only a dry microfibre cloth.</li>
 <li><strong>Warning:</strong> <strong>Do not use isopropyl alcohol or glass cleaners</strong>, as they cause &quot;crazing&quot; in the acrylic.</li>
 <li><strong>Hardware:</strong> Periodically check that M3 corner bolts are finger-tight.</li>
 </ul>
 <hr>
-<h2>10 / DEVELOPER SPECIFICATIONS</h2>
+<h2 id="10-developer-specifications">10 / DEVELOPER SPECIFICATIONS</h2>
 <p>IDX-1 is built on an open architecture.</p>
 <ul>
 <li><strong>MCU:</strong> ESP32-C3-MINI-1 (4MB Flash)</li>
@@ -138,7 +138,7 @@
 <li><strong>LEDs:</strong> 4 x WS2812B</li>
 <li><strong>Interface:</strong> USB-C Serial</li>
 </ul>
-<h3>GPIO PIN MAPPING</h3>
+<h3 id="gpio-pin-mapping">GPIO PIN MAPPING</h3>
 <table>
 <thead>
 <tr>
@@ -178,7 +178,7 @@
 <td align="left">GPIO 09</td>
 </tr>
 </tbody></table>
-<h3>ESPHOME</h3>
+<h3 id="esphome">ESPHOME</h3>
 <p>IDX-1 supports <a href="https://esphome.io">ESPHome</a> as an alternative firmware, giving full control to Home Assistant.</p>
 <p>The ESPHome configuration files required to build the firmware binary are available at <a href="https://github.com/analoguedeskco/esphome">github.com/analoguedeskco/esphome</a>. Compile these using the ESPHome dashboard or CLI to produce a <code>.bin</code>, then flash via USB-C. The GPIO pin mapping above applies directly to the configuration.</p>
 <p>Once flashed, IDX-1 appears as a native Home Assistant device — the needle and LEDs are exposed as standard entities and can be driven by any HA automation.</p>
