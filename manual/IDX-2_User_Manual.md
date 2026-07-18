@@ -1,6 +1,6 @@
 # IDX-2 / User Manual
 
-**Model:** IDX-2
+**Model:** IDX-2  
 **Date:** 2026-06-09
 
 ![IDX-2](../images/nordic.png)

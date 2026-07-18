@@ -17,8 +17,9 @@ cp "$ROOT/index.html" "$ROOT/docs/"
 cp "$ROOT/images/"*   "$ROOT/docs/images/"
 cp "$ROOT/setup/"*.html "$ROOT/docs/setup/"
 
-# Manual index page
+# Manual index page and downloadable assets
 cp "$ROOT/manual/index.html" "$ROOT/docs/manual/"
+cp "$ROOT/manual/"*.pdf "$ROOT/manual/"*.svg "$ROOT/docs/manual/"
 
 # Generate manual HTML from Markdown
 echo "Rendering manual..."

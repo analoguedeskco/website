@@ -15,8 +15,9 @@ Copy-Item "$ROOT\index.html"  "$ROOT\docs\"
 Copy-Item "$ROOT\images\*"    "$ROOT\docs\images\"
 Copy-Item "$ROOT\setup\*.html" "$ROOT\docs\setup\"
 
-# Manual index page
+# Manual index page and downloadable assets
 Copy-Item "$ROOT\manual\index.html" "$ROOT\docs\manual\"
+Copy-Item "$ROOT\manual\*.pdf", "$ROOT\manual\*.svg" "$ROOT\docs\manual\"
 
 # Generate manual HTML from Markdown
 Write-Host "Rendering manual..."

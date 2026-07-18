@@ -14,19 +14,21 @@
         <img src="../images/logo_1_line.png" alt="Analogue Desk Co." class="logo">
     </a>
     <div class="manual-content">
-<h1 id="idx-2-user-manual">IDX-2 / User Manual</h1>
-<p><strong>Model:</strong> IDX-2<br><strong>Date:</strong> 2026-06-09</p>
-<p><img src="../images/nordic.png" alt="IDX-2"></p>
+<h1 id="idx-3-user-manual">IDX-3 / User Manual</h1>
+<p><strong>Model:</strong> IDX-3<br><strong>Date:</strong> 2026-07-18</p>
+<p><img src="../images/IDX-3%20Nordic%20Front.jpg" alt="IDX"></p>
 <hr>
 <h2 id="01-the-concept">01 / THE CONCEPT</h2>
-<p>IDX-2 bridges the gap between the ephemeral nature of digital data and the tactile permanence of instrumentation. Whether tracking market volatility or environmental signals, you now have a physical anchor for your most important data.</p>
+<p>IDX bridges the gap between the ephemeral nature of digital data and the tactile permanence of instrumentation. Whether tracking market volatility or environmental signals, you now have a physical anchor for your most important data.</p>
+<p>Available in three finishes: Alba, Nordic, and Sanctuary.</p>
+<p><img src="../images/IDX-3%20Trio%20Above.jpg" alt="IDX in Alba, Nordic, and Sanctuary"></p>
 <p>We believe in open architecture.</p>
 <hr>
 <h2 id="02-pre-flight-check">02 / PRE-FLIGHT CHECK</h2>
 <p>Before powering the device for the first time, please note:</p>
 <ul>
 <li><strong>Power Input:</strong> Use the provided USB-C cable. Connect to a standard 5V DC (0.5A) USB power source.</li>
-<li><strong>WiFi:</strong> IDX-2 is designed for 2.4GHz WPA2 Home Networks. It is <strong>not</strong> compatible with 5GHz-only bands or Captive Portals.</li>
+<li><strong>WiFi:</strong> IDX is designed for 2.4GHz WPA2 Home Networks. It is <strong>not</strong> compatible with 5GHz-only bands or Captive Portals.</li>
 <li><strong>Mechanical Care:</strong> The needle is driven by a precision stepper motor. <strong>Do not manually rotate the needle</strong>, as this may cause misalignment or damage.</li>
 <li><strong>Safety:</strong> Consult and retain the supplied safety information.</li>
 </ul>
@@ -34,7 +36,7 @@
 <h2 id="03-setup-wifi">03 / SETUP WIFI</h2>
 <ol>
 <li><strong>Power On:</strong> Connect the USB-C cable. The device will glow <strong>deep blue</strong>, indicating it is ready for setup.</li>
-<li><strong>Access Point:</strong> On your smartphone or laptop, connect to the WiFi network named <code>IDX-setup</code>.</li>
+<li><strong>Access Point:</strong> On your smartphone or laptop, connect to the WiFi network named <code>IDX_setup</code>.</li>
 <li><strong>Portal:</strong> A configuration page should open automatically. If not, navigate to <code>http://192.168.4.1</code>.</li>
 <li><strong>Password:</strong> Use <code>analoguedeskco</code> if challenged.</li>
 <li><strong>Credentials:</strong> Select your home WiFi and enter your password.</li>
@@ -43,7 +45,7 @@
 </ol>
 <hr>
 <h2 id="04-initialisation">04 / INITIALISATION</h2>
-<p>IDX-2 will cycle through several phases indicated by color:</p>
+<p>IDX will cycle through several phases indicated by color:</p>
 <ul>
 <li><strong>WHITE (5s):</strong> Reset mode (Factory reset can be triggered here).</li>
 <li><strong>LIGHT BLUE / CYAN:</strong> Motor zeroing. The needle will sweep its full range; light buzzing is normal.</li>
@@ -66,7 +68,7 @@
 </ol>
 <hr>
 <h2 id="06-mode">06 / MODE</h2>
-<p>Choose what data source IDX-2 references.</p>
+<p>Choose what data source IDX references.</p>
 <p>Each MODE provides a mapping from its value to a 0-1 range, which defines the position of the pointer. Default values are shown below.</p>
 <table>
 <thead>
@@ -107,18 +109,18 @@
 <td align="left">Absolute sentiment index. CMC API key required.</td>
 </tr>
 <tr>
-<td align="left">Clock (12h)</td>
+<td align="left">12-hour Sweep</td>
 <td align="left">12.00</td>
 <td align="left">06.00</td>
 <td align="left">11.59</td>
-<td align="left">Does not rotate like a clock; Sweeps through 180 degrees in 12h then returns to MIN</td>
+<td align="left">Sweeps through 180 degrees in 12h</td>
 </tr>
 <tr>
-<td align="left">Clock (24h)</td>
+<td align="left">24-hour Sweep</td>
 <td align="left">10.00</td>
 <td align="left">12.00</td>
 <td align="left">23.59</td>
-<td align="left">Does not rotate like a clock; Sweeps through 180 degrees in 24h then returns to MIN</td>
+<td align="left">Sweeps through 180 degrees in 24h</td>
 </tr>
 <tr>
 <td align="left">Finnhub Stock Tracker</td>
@@ -132,7 +134,7 @@
 <td align="left">0</td>
 <td align="left">50</td>
 <td align="left">100</td>
-<td align="left">Maps any numeric entity state from your local instance. For indoor temperature, choose range like 9-25C</td>
+<td align="left">Maps any numeric entity state from your local Homa Assistant instance. For indoor temperature, choose a range like 9-25C</td>
 </tr>
 <tr>
 <td align="left">Pomodoro Timer</td>
@@ -150,13 +152,102 @@
 </tr>
 </tbody></table>
 <h3 id="reading-the-dial">READING THE DIAL</h3>
-<p>Once you understand how it moves, the dial is easy to read.</p>
-<p>Firstly, by default, the pointer moves 180 degrees from pointing left, to up, to right. The bottom half of the dial is not used.</p>
-<p>The rotation of the pointer is defined by a <code>position</code> value between 0 (MIN) and 1 (MAX):</p>
+<p>The rotation of the pointer is defined by a <code>position</code> value between 0 (MIN) and 1 (MAX).</p>
+<ul>
+<li>MIN: Pointing left</li>
+<li>MID: Pointing up</li>
+<li>MAX: Pointing right</li>
+</ul>
 <p>The table above shows each mode&#39;s mapping.</p>
 <p>You can also go to ADVANCED / DIAGNOSTICS / EVENT LOG in the UI to see the real-time value generated by the current mode.</p>
+<p>Optionally, pick a gauge insert (see below) whose printed MIN/MID/MAX labels match the mode you&#39;ve selected, so the scale on the dial reads correctly. You can also create your own custom inserts.</p>
 <hr>
-<h2 id="07-ambience">07 / AMBIENCE</h2>
+<h2 id="07-gauge-inserts">07 / GAUGE INSERTS</h2>
+<p>IDX&#39;s faceplate accepts a swappable, printed insert behind the needle, so the dial always reads correctly for whatever MODE you&#39;re tracking.</p>
+<h3 id="included-designs">INCLUDED DESIGNS</h3>
+<p>A sheet of eight pre-cut inserts is provided:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Insert</th>
+<th align="left">Scale</th>
+<th align="left">Suits</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Percentage</td>
+<td align="left">0 – 100%</td>
+<td align="left">Home Assistant, generic 0-100 sources</td>
+</tr>
+<tr>
+<td align="left">Relative %</td>
+<td align="left">-5% – +5%</td>
+<td align="left">Stock / Crypto Tracker</td>
+</tr>
+<tr>
+<td align="left">Percentage (fine)</td>
+<td align="left">0 – 100% (20-step)</td>
+<td align="left">Home Assistant, generic 0-100 sources</td>
+</tr>
+<tr>
+<td align="left">12-Hour Clock</td>
+<td align="left">0 – 12 HOUR</td>
+<td align="left">Clock (12h)</td>
+</tr>
+<tr>
+<td align="left">Temperature</td>
+<td align="left">-10°C – 30°C</td>
+<td align="left">Temperature</td>
+</tr>
+<tr>
+<td align="left">Air Quality</td>
+<td align="left">0 – 200 AQI</td>
+<td align="left">Air Quality Index</td>
+</tr>
+<tr>
+<td align="left">Blank</td>
+<td align="left">—</td>
+<td align="left">Custom labelling by hand</td>
+</tr>
+<tr>
+<td align="left">Generic Scale</td>
+<td align="left">0 – 25</td>
+<td align="left">Pomodoro Timer (minutes), custom sources</td>
+</tr>
+</tbody></table>
+<h3 id="downloads">DOWNLOADS</h3>
+<p>Prefer to design your own? Both the pre-designed sheet and a blank template are available as vector (SVG) and print-ready (PDF) files, as a starting point:</p>
+<div class="manual-download">
+
+<p><a href="IDX_inserts_dials_v3.pdf">IDX_inserts_dials_v3.pdf</a> · <a href="IDX_inserts_dials_v3.svg">IDX_inserts_dials_v3.svg</a></p>
+<p><a href="IDX_gauge_inserts_blank_v2.2.pdf">IDX_gauge_inserts_blank_v2.2.pdf</a> · <a href="IDX_gauge_inserts_blank_v2.2.svg">IDX_gauge_inserts_blank_v2.2.svg</a></p>
+</div>
+
+<p>Print on transparent stock (acetate), then cut along the dotted line.</p>
+<h3 id="swapping-an-insert">SWAPPING AN INSERT</h3>
+<p><strong>Tools required:</strong> 2mm hex key.</p>
+<p><strong>Remove circular faceplate</strong></p>
+<ol>
+<li>Unplug IDX and lay it on its back with the front facing up.</li>
+<li>Unscrew the brass corner fixings on the front, using the 2mm hex key.</li>
+<li>Lift off the clear front window. Hold by the edge to avoid fingerprints. Place somewhere clean.</li>
+<li>Lift off the 10mm clear spacer.</li>
+<li>Lift off the plywood face with the circular cutout.</li>
+</ol>
+<p><strong>Add gauge insert</strong></p>
+<ol>
+<li>Choose a transparent insert (gauge scale) and slide it behind the needle hub. The needle axle should fit into the slot.</li>
+<li>Ensure the edge of the insert is aligned with the edge of the device on the &#39;top&#39; edge.</li>
+</ol>
+<p><strong>Refit gauge faceplate</strong></p>
+<ol>
+<li>Slide the faceplate onto the corner pins.</li>
+<li>Replace the 10mm spacer and front window.</li>
+<li>Refit the brass corner screws loosely.</li>
+<li>Ensure all layers are aligned, then perform final tightening of the corner screws. <strong>Do not overtighten.</strong></li>
+</ol>
+<hr>
+<h2 id="08-ambience">08 / AMBIENCE</h2>
 <p>We recommend long <strong>CYCLE DURATIONS</strong> (e.g., 600 seconds) for maximum calm.</p>
 <table>
 <thead>
@@ -199,7 +290,7 @@
 </tr>
 </tbody></table>
 <hr>
-<h2 id="08-advanced-amp-troubleshooting">08 / ADVANCED &amp; TROUBLESHOOTING</h2>
+<h2 id="09-advanced-amp-troubleshooting">09 / ADVANCED &amp; TROUBLESHOOTING</h2>
 <ul>
 <li><strong>Pointer Calibration:</strong> If misaligned, set Mode to &quot;Off&quot; and tweak by +/- 10° until pointing at 12 o&#39;clock position.</li>
 <li><strong>Timezone:</strong> Adjust to ensure Night Mode operates correctly.</li>
@@ -207,15 +298,16 @@
 <li><strong>Hardware Reset:</strong> Cycle power 3 times, turning it off specifically during the <strong>White</strong> phase. The device will glow <strong>Magenta</strong> when reset is complete. It will turn blue and be ready for Wifi configuration.</li>
 </ul>
 <hr>
-<h2 id="09-care-amp-maintenance">09 / CARE &amp; MAINTENANCE</h2>
+<h2 id="10-care-amp-maintenance">10 / CARE &amp; MAINTENANCE</h2>
 <ul>
 <li><strong>Cleaning:</strong> Use only a dry microfibre cloth.</li>
 <li><strong>Warning:</strong> <strong>Do not use isopropyl alcohol or glass cleaners</strong>, as they cause &quot;crazing&quot; in the acrylic.</li>
 <li><strong>Hardware:</strong> Periodically check that M3 corner bolts are finger-tight. Do not overtighten.</li>
+<li><strong>Inserts:</strong> Card inserts may fade in direct sunlight over time; reprint from the supplied files as needed.</li>
 </ul>
 <hr>
-<h2 id="10-developer-specifications">10 / DEVELOPER SPECIFICATIONS</h2>
-<p>IDX-2 is built on an open architecture.</p>
+<h2 id="11-developer-specifications">11 / DEVELOPER SPECIFICATIONS</h2>
+<p>IDX is built on an open architecture.</p>
 <ul>
 <li><strong>MCU:</strong> ESP32-C3-MINI-1 (4MB Flash)</li>
 <li><strong>Motor:</strong> X27.168 Stepper Motor</li>
@@ -263,9 +355,9 @@
 </tr>
 </tbody></table>
 <h3 id="esphome">ESPHOME</h3>
-<p>IDX-2 supports <a href="https://esphome.io">ESPHome</a> as an alternative firmware, giving full control to Home Assistant.</p>
+<p>IDX supports <a href="https://esphome.io">ESPHome</a> as an alternative firmware, giving full control to Home Assistant.</p>
 <p>The ESPHome configuration files required to build the firmware binary are available at <a href="https://github.com/analoguedeskco/esphome">github.com/analoguedeskco/esphome</a>. Compile these using the ESPHome dashboard or CLI to produce a <code>.bin</code>, then flash via <a href="https://web.esphome.io/">web.esphome.io</a></p>
-<p>Once flashed, IDX-2 appears as a native Home Assistant device — the needle and LEDs are exposed as standard entities and can be driven by any HA automation.</p>
+<p>Once flashed, IDX appears as a native Home Assistant device — the needle and LEDs are exposed as standard entities and can be driven by any HA automation.</p>
 <p>To switch back to the stock firmware, contact support (see below).</p>
 <hr>
 <p><strong>Support:</strong></p>
