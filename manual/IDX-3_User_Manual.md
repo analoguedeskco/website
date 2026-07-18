@@ -49,7 +49,7 @@ IDX will cycle through several phases indicated by color:
 - **WHITE (5s):** Reset mode (Factory reset can be triggered here).
 - **LIGHT BLUE / CYAN:** Motor zeroing. The needle will sweep its full range; light buzzing is normal.
 - **GREEN:** Centering. Pointer moves to midpoint.
-- **ACTIVE:** The device enters operating mode (Default: Clock mode / Glacier ambience).
+- **ACTIVE:** The device enters operating mode (Default: HN Hotness / Glacier ambience).
 
 ---
 
@@ -71,6 +71,8 @@ Access the internal dashboard via your web browser to customize your device.
 
 Choose what data source IDX references.
 
+By default, IDX ships in **HN Hotness** mode — no keys, location or configuration required. The needle shows the *hotness* of the [Hacker News](https://news.ycombinator.com) front page as a percentage: the current #1 story's score measured against a 500-point cap, so **100% means the top story has passed 500 points**. It pairs with the **Percentage (0–100)** insert and drifts gently through the day as the top story rises and is eventually displaced.
+
 Each MODE provides a mapping from its value to a 0-1 range, which defines the position of the pointer. Default values are shown below.
 
 | MODE                      | MIN VALUE | MID POINT | MAX VALUE | NOTES                                                                                                                    |
@@ -82,6 +84,7 @@ Each MODE provides a mapping from its value to a 0-1 range, which defines the po
 | 12-hour Sweep             | 12.00     | 06.00     | 11.59     | Sweeps through 180 degrees in 12h                                                                                        |
 | 24-hour Sweep             | 10.00     | 12.00     | 23.59     | Sweeps through 180 degrees in 24h                                                                                        |
 | Finnhub Stock Tracker     | -5%       | 0%        | +5%       | Relative 24h price change; centre is no change.                                                                          |
+| HN Hotness                | 0%        | 50%       | 100%      | **Default.** Hacker News front-page hotness — #1 story score against a 500-point cap (100% = 500+). Pairs with the 0–100 insert. No key or location required.             |
 | Home Assistant            | 0         | 50        | 100       | Maps any numeric entity state from your local Homa Assistant instance. For indoor temperature, choose a range like 9-25C |
 | Pomodoro Timer            | 0         | 12m30s    | 25m       | Focus sweep toward task completion (counts down). Minutes.                                                               |
 | Temperature               | -10C      | 15C       | 40C       | Maps a OpenMeteo temperature report for your city location.                                                              |
@@ -112,7 +115,7 @@ A sheet of eight pre-cut inserts is provided:
 
 | Insert            | Scale              | Suits                                    |
 | :---------------- | :----------------- | :--------------------------------------- |
-| Percentage        | 0 – 100%           | Home Assistant, generic 0-100 sources    |
+| Percentage        | 0 – 100%           | HN Hotness (default), Home Assistant, generic 0-100 sources |
 | Relative %        | -5% – +5%          | Stock / Crypto Tracker                   |
 | Percentage (fine) | 0 – 100% (20-step) | Home Assistant, generic 0-100 sources    |
 | 12-Hour Clock     | 0 – 12 HOUR        | Clock (12h)                              |

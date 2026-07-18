@@ -50,7 +50,7 @@
 <li><strong>WHITE (5s):</strong> Reset mode (Factory reset can be triggered here).</li>
 <li><strong>LIGHT BLUE / CYAN:</strong> Motor zeroing. The needle will sweep its full range; light buzzing is normal.</li>
 <li><strong>GREEN:</strong> Centering. Pointer moves to midpoint.</li>
-<li><strong>ACTIVE:</strong> The device enters operating mode (Default: Clock mode / Glacier ambience).</li>
+<li><strong>ACTIVE:</strong> The device enters operating mode (Default: HN Hotness / Glacier ambience).</li>
 </ul>
 <hr>
 <h2 id="05-configuration">05 / CONFIGURATION</h2>
@@ -69,6 +69,7 @@
 <hr>
 <h2 id="06-mode">06 / MODE</h2>
 <p>Choose what data source IDX references.</p>
+<p>By default, IDX ships in <strong>HN Hotness</strong> mode — no keys, location or configuration required. The needle shows the <em>hotness</em> of the <a href="https://news.ycombinator.com">Hacker News</a> front page as a percentage: the current #1 story&#39;s score measured against a 500-point cap, so <strong>100% means the top story has passed 500 points</strong>. It pairs with the <strong>Percentage (0–100)</strong> insert and drifts gently through the day as the top story rises and is eventually displaced.</p>
 <p>Each MODE provides a mapping from its value to a 0-1 range, which defines the position of the pointer. Default values are shown below.</p>
 <table>
 <thead>
@@ -130,6 +131,13 @@
 <td align="left">Relative 24h price change; centre is no change.</td>
 </tr>
 <tr>
+<td align="left">HN Hotness</td>
+<td align="left">0%</td>
+<td align="left">50%</td>
+<td align="left">100%</td>
+<td align="left"><strong>Default.</strong> Hacker News front-page hotness — #1 story score against a 500-point cap (100% = 500+). Pairs with the 0–100 insert. No key or location required.</td>
+</tr>
+<tr>
 <td align="left">Home Assistant</td>
 <td align="left">0</td>
 <td align="left">50</td>
@@ -177,7 +185,7 @@
 <tbody><tr>
 <td align="left">Percentage</td>
 <td align="left">0 – 100%</td>
-<td align="left">Home Assistant, generic 0-100 sources</td>
+<td align="left">HN Hotness (default), Home Assistant, generic 0-100 sources</td>
 </tr>
 <tr>
 <td align="left">Relative %</td>
