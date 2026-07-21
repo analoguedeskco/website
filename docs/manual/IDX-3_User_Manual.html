@@ -69,7 +69,7 @@
 <hr>
 <h2 id="06-mode">06 / MODE</h2>
 <p>Choose what data source IDX references.</p>
-<p>By default, IDX ships in <strong>HN Hotness</strong> mode — no keys, location or configuration required. The needle shows the <em>hotness</em> of the <a href="https://news.ycombinator.com">Hacker News</a> front page as a percentage: the current #1 story&#39;s score measured against a 500-point cap, so <strong>100% means the top story has passed 500 points</strong>. It pairs with the <strong>Percentage (0–100)</strong> insert and drifts gently through the day as the top story rises and is eventually displaced.</p>
+<p>By default, IDX ships in <strong>HN Hotness</strong> MODE, no keys, location or configuration required. The needle shows the <em>hotness</em> of the <a href="https://news.ycombinator.com">Hacker News</a> front page as a percentage: the current #1 story&#39;s score measured against a 500-point cap (by default), so <strong>100% means the top story has passed 500 points</strong>. It pairs with the <strong>Percentage (0–100)</strong> insert. We chose this MODE as the default because it drifts gently through the day as the top story rises and is eventually displaced.</p>
 <p>Each MODE provides a mapping from its value to a 0-1 range, which defines the position of the pointer. Default values are shown below.</p>
 <table>
 <thead>
@@ -135,7 +135,7 @@
 <td align="left">0%</td>
 <td align="left">50%</td>
 <td align="left">100%</td>
-<td align="left"><strong>Default.</strong> Hacker News front-page hotness — #1 story score against a 500-point cap (100% = 500+). Pairs with the 0–100 insert. No key or location required.</td>
+<td align="left"><strong>Default.</strong> Hacker News front-page hotness — #1 story score against a maximum value (500 points by default). Pairs with the 0–100 insert.</td>
 </tr>
 <tr>
 <td align="left">Home Assistant</td>
@@ -171,7 +171,7 @@
 <p>Optionally, pick a gauge insert (see below) whose printed MIN/MID/MAX labels match the mode you&#39;ve selected, so the scale on the dial reads correctly. You can also create your own custom inserts.</p>
 <hr>
 <h2 id="07-gauge-inserts">07 / GAUGE INSERTS</h2>
-<p>IDX&#39;s faceplate accepts a swappable, printed insert behind the needle, so the dial always reads correctly for whatever MODE you&#39;re tracking.</p>
+<p>IDX accepts a swappable, printed face-insert behind the needle, so the dial always reads correctly for whatever MODE you&#39;re tracking.</p>
 <h3 id="included-designs">INCLUDED DESIGNS</h3>
 <p>A sheet of eight pre-cut inserts is provided:</p>
 <table>
