@@ -10,7 +10,9 @@ Source for [docs.analoguedesk.co](https://docs.analoguedesk.co), served via GitH
 ├── style.css
 ├── images/                # shared images
 ├── manual/
-│   ├── IDX-1_User_Manual.md   # source of truth for the manual
+│   ├── IDX-2_User_Manual.md   # one Markdown file per device — source of truth
+│   ├── IDX-3_User_Manual.md
+│   ├── IDX-3.1_User_Manual.md
 │   ├── manual.css
 │   └── index.html
 ├── setup/
@@ -24,7 +26,9 @@ Source for [docs.analoguedesk.co](https://docs.analoguedesk.co), served via GitH
 
 ## Editing the manual
 
-Edit `manual/IDX-1_User_Manual.md`. Images go in `images/`.
+Edit the relevant `manual/IDX-*_User_Manual.md`. Images go in `images/`.
+
+To add a new manual, create the Markdown file, add its basename to the `manuals` array in `scripts/build-manual.js`, and add a card to `manual/index.html`.
 
 ## Building
 

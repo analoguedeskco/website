@@ -10,7 +10,11 @@
       "Bash(npm run *)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "PowerShell(& \"c:\\\\Users\\\\sipic\\\\Documents\\\\Dev\\\\github.com\\\\analoguedeskco\\\\website\\\\build.ps1\")",
+      "Bash(npx markdownlint-cli2 *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(git rm *)"
     ]
   }
 }

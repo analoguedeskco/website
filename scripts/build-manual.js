@@ -9,7 +9,7 @@ const outputDir = path.join(ROOT, 'docs', 'manual');
 
 fs.mkdirSync(outputDir, { recursive: true });
 
-const manuals = ['IDX-1_User_Manual', 'IDX-2_User_Manual', 'IDX-3_User_Manual'];
+const manuals = ['IDX-2_User_Manual', 'IDX-3_User_Manual', 'IDX-3.1_User_Manual'];
 
 for (const name of manuals) {
     const md = fs.readFileSync(path.join(manualDir, `${name}.md`), 'utf8');

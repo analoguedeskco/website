@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDX User Manual | Analogue Desk Co.</title>
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="manual.css">
+</head>
+<body>
+    <a href="../index.html">
+        <img src="../images/logo_1_line.png" alt="Analogue Desk Co." class="logo">
+    </a>
+    <div class="manual-content">
+<h1 id="idx-3-1-user-manual">IDX-3.1 / User Manual</h1>
+<p><strong>Model:</strong> IDX-3.1<br><strong>Serial Number:</strong> IDX-3-1xx<br><strong>Firmware:</strong> 6.x<br><strong>Date:</strong> 2026-08-16</p>
+<p><img src="../images/IDX-3%20Sanctuary%20Front%20Scale.jpg" alt="IDX"></p>
+<hr>
+<h2 id="01-the-concept">01 / THE CONCEPT</h2>
+<p>IDX bridges the gap between the ephemeral nature of digital data and the tactile permanence of instrumentation. Whether tracking market volatility or environmental signals, you now have a physical anchor for your most important data.</p>
+<p>Available in three finishes: Alba, Nordic, and Sanctuary.</p>
+<p><img src="../images/IDX-3%20Trio%20Scales.jpg" alt="IDX in Alba, Nordic, and Sanctuary"></p>
+<hr>
+<h2 id="02-pre-flight-check">02 / PRE-FLIGHT CHECK</h2>
+<p>Before powering the device for the first time, please note:</p>
+<ul>
+<li><strong>Power Input:</strong> Use the provided USB-C cable. Connect to a standard 5V DC (0.5A) USB power source.</li>
+<li><strong>WiFi:</strong> IDX is designed for 2.4GHz WPA2 Home Networks. It is <strong>not</strong> compatible with 5GHz-only bands or Captive Portals.</li>
+<li><strong>Mechanical Care:</strong> The needle is driven by a precision stepper motor. <strong>Do not manually rotate the needle</strong>, as this may cause misalignment or damage.</li>
+<li><strong>Safety:</strong> Consult and retain the supplied safety information.</li>
+</ul>
+<hr>
+<h2 id="03-setup-wifi">03 / SETUP WIFI</h2>
+<p>A new device runs a standalone <strong>Display</strong> MODE, designed for use on a Store shelf. In Display MODE, the needle walks the dial with no data source and no internet connection.</p>
+<ol>
+<li><strong>Power On:</strong> Connect the USB-C cable. The device starts up and calibrates the needle (Cyan glow), then the LEDs <strong>flash deep blue for one second</strong> — This indicates Wifi is not yet configured. The needle begins walking.</li>
+<li><strong>Access Point:</strong> On your smartphone or laptop, connect to the WiFi network named <code>IDX-&lt;serial&gt;-setup</code> — for example <code>IDX-3-102-setup</code>. Check the rear of the unit for the Serial Number.</li>
+<li><strong>Password:</strong> <code>idxsetup</code>.</li>
+<li><strong>Portal:</strong> A configuration page should open automatically. If not, navigate to <code>http://192.168.4.1</code>.</li>
+<li><strong>Credentials:</strong> Select your local WiFi and enter your password.</li>
+<li><strong>Address &amp; Login:</strong> The setup page shows the device&#39;s local address and its login details. <strong>Copy this address</strong> for step 05.</li>
+<li><strong>Finish:</strong> The device restarts onto your network.</li>
+</ol>
+<h3 id="the-5-minute-window">THE 5-MINUTE WINDOW</h3>
+<p>The Wifi Setup Access Point closes after 5 minutes if unused, as a security precaution.</p>
+<p>To reopen it, power-cycle the device.</p>
+<hr>
+<h2 id="04-initialisation">04 / INITIALISATION</h2>
+<p>At power-up, IDX will cycle through several phases indicated by color:</p>
+<ul>
+<li><strong>WHITE (5s):</strong> Device starting. Reset mode. Unplug and replug repeatedly to Factory Reset.</li>
+<li><strong>MAGENTA:</strong> Factory reset has been triggered, the device will now reboot.</li>
+<li><strong>LIGHT BLUE / CYAN:</strong> Motor zeroing. The needle sweeps its full range; A gentle buzzing is normal.</li>
+<li><strong>DEEP BLUE FLASH (1s):</strong> Only shown if Wifi has not yet been configured.</li>
+<li><strong>ACTIVE:</strong> The LEDs fade into the ambience and the device enters operating mode. A new or factory-reset device runs <strong>Display / Glacial</strong>.</li>
+</ul>
+<hr>
+<h2 id="05-configuration">05 / CONFIGURATION</h2>
+<p>Access the internal dashboard via your web browser to customize your device.</p>
+<ol>
+<li>Paste the <strong>address</strong> from Step 03 into your browser.</li>
+<li>Sign in (see below).</li>
+<li>Create a bookmark for future convenience.</li>
+<li>Dashboard Sections:<ul>
+<li><strong>QUICK START:</strong> Several pre-configured pairs of mode and ambience.</li>
+<li><strong>MODE:</strong> Select a data source.</li>
+<li><strong>AMBIENCE:</strong> Modify LED effects and night mode.</li>
+<li><strong>ADVANCED:</strong> Diagnostics and reset options.</li>
+</ul>
+</li>
+</ol>
+<h3 id="signing-in">SIGNING IN</h3>
+<p>The web interface requires a login.</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Username</strong></td>
+<td align="left"><code>idx</code> (always)</td>
+</tr>
+<tr>
+<td align="left"><strong>Password</strong></td>
+<td align="left"><code>idxsetup</code></td>
+</tr>
+</tbody></table>
+<p>You can set your own password under <strong>ADVANCED</strong> (minimum 6 characters). The current password is shown on that page. If you forget it, a factory reset returns the device&#39;s password to <code>idxsetup</code>.</p>
+<p><strong>What the login protects.</strong> The default password is the same on every device and is printed here, so treat it as public. It stops casual and accidental access, but it is not protection from someone who knows the product. If IDX shares a network with people you don&#39;t know, set your own password.</p>
+<h3 id="api-keys-amp-tokens">API KEYS &amp; TOKENS</h3>
+<p>Keys and tokens (CoinMarketCap, Finnhub, Home Assistant) are never sent back to your browser once saved. The field reads <em>&quot;Saved — leave blank to keep&quot;</em> instead of showing the value.</p>
+<ul>
+<li><strong>Leave the field blank to keep the stored key.</strong> You do not need to re-enter it to change other settings on the page.</li>
+<li><strong>A stored key cannot be viewed again.</strong> Keep your own copy.</li>
+<li><strong>A stored key cannot be cleared from the interface, only replaced.</strong> A factory reset is the only way to remove one.</li>
+</ul>
+<hr>
+<h2 id="06-mode">06 / MODE</h2>
+<p>Choose what data source IDX references.</p>
+<p>By default, IDX ships in <strong>Display</strong> MODE: the needle walks the dial on its own, with no data source, no keys and no internet connection. A new device demonstrates itself out of the box. Display is also selectable like any other MODE once the device is on your network.</p>
+<p>Once you are on WiFi, other modes can be selected.</p>
+<p>Each MODE provides a mapping from its value to a 0-1 range, which defines the position of the pointer. Default values are shown below.</p>
+<table>
+<thead>
+<tr>
+<th align="left">MODE</th>
+<th align="left">MIN VALUE</th>
+<th align="left">MID POINT</th>
+<th align="left">MAX VALUE</th>
+<th align="left">NOTES</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Air Quality Index</td>
+<td align="left">0</td>
+<td align="left">50</td>
+<td align="left">100</td>
+<td align="left">Absolute AQI scale, based on your city location.</td>
+</tr>
+<tr>
+<td align="left">Alt.me Fear &amp; Greed Index</td>
+<td align="left">0</td>
+<td align="left">50</td>
+<td align="left">100</td>
+<td align="left">Absolute sentiment index (0 = extreme fear, 100 = extreme greed).</td>
+</tr>
+<tr>
+<td align="left">CMC Crypto Tracker</td>
+<td align="left">-5%</td>
+<td align="left">0%</td>
+<td align="left">+5%</td>
+<td align="left">Relative 24h price change; centre is no change. CMC API key required.</td>
+</tr>
+<tr>
+<td align="left">CMC Fear &amp; Greed Index</td>
+<td align="left">0</td>
+<td align="left">50</td>
+<td align="left">100</td>
+<td align="left">Absolute sentiment index. CMC API key required.</td>
+</tr>
+<tr>
+<td align="left">Display</td>
+<td align="left">—</td>
+<td align="left">—</td>
+<td align="left">—</td>
+<td align="left"><strong>Default.</strong> Autonomous needle walk; no data source, no configuration, no internet. Works with any face insert.</td>
+</tr>
+<tr>
+<td align="left">12-hour Sweep</td>
+<td align="left">12.00</td>
+<td align="left">06.00</td>
+<td align="left">11.59</td>
+<td align="left">Sweeps through 180 degrees in 12h</td>
+</tr>
+<tr>
+<td align="left">24-hour Sweep</td>
+<td align="left">10.00</td>
+<td align="left">12.00</td>
+<td align="left">23.59</td>
+<td align="left">Sweeps through 180 degrees in 24h</td>
+</tr>
+<tr>
+<td align="left">Finnhub Stock Tracker</td>
+<td align="left">-5%</td>
+<td align="left">0%</td>
+<td align="left">+5%</td>
+<td align="left">Relative 24h price change; centre is no change.</td>
+</tr>
+<tr>
+<td align="left">HN Hotness</td>
+<td align="left">0%</td>
+<td align="left">50%</td>
+<td align="left">100%</td>
+<td align="left">Hacker News front-page hotness — #1 story score against a maximum value (500 points by default). Pairs with the 0–100 face insert.</td>
+</tr>
+<tr>
+<td align="left">Home Assistant</td>
+<td align="left">0</td>
+<td align="left">50</td>
+<td align="left">100</td>
+<td align="left">Maps any numeric entity state from your local Homa Assistant instance. For indoor temperature, choose a range like 9-25C</td>
+</tr>
+<tr>
+<td align="left">Pomodoro Timer</td>
+<td align="left">0</td>
+<td align="left">12m30s</td>
+<td align="left">25m</td>
+<td align="left">Focus sweep toward task completion (counts down). Minutes.</td>
+</tr>
+<tr>
+<td align="left">Temperature</td>
+<td align="left">-10C</td>
+<td align="left">15C</td>
+<td align="left">40C</td>
+<td align="left">Maps a OpenMeteo temperature report for your city location.</td>
+</tr>
+</tbody></table>
+<h3 id="display-mode">DISPLAY MODE</h3>
+<p>The needle picks a destination on the dial, travels there over a series of small moves, pauses when it arrives, then picks somewhere else. A full crossing of the dial takes around three minutes.</p>
+<p>It is deliberately neither random nor a repeating sweep. Every move is a different size — most are about a unit of the dial, a full-size move is occasional, and the walk sometimes pauses mid-journey. Nothing settles into a rhythm. Movement is capped at 5 units of the dial (about 27 of the motor&#39;s 540 steps) per move and is usually a fifth of that, so it stays quiet enough for a shop floor or a desk.</p>
+<p>Each device seeds itself from hardware randomness, so two units side by side do not move in step with each other.</p>
+<p>There is nothing to configure. Display works with any AMBIENCE — <strong>Sentiment</strong> is worth trying, as the LEDs track the needle as it walks.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Behaviour</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Time between moves</td>
+<td align="left">5 seconds</td>
+</tr>
+<tr>
+<td align="left">Largest possible move</td>
+<td align="left">5 units of the dial (of 100)</td>
+</tr>
+<tr>
+<td align="left">Smallest move</td>
+<td align="left">0.4 units</td>
+</tr>
+<tr>
+<td align="left">Minimum distance to a new destination</td>
+<td align="left">15 units</td>
+</tr>
+<tr>
+<td align="left">Chance of pausing mid-journey</td>
+<td align="left">15% per move</td>
+</tr>
+<tr>
+<td align="left">Pause on arrival</td>
+<td align="left">5 to 20 seconds</td>
+</tr>
+</tbody></table>
+<h3 id="reading-the-dial">READING THE DIAL</h3>
+<p>The rotation of the pointer is defined by a <code>position</code> value between 0 (MIN) and 1 (MAX).</p>
+<ul>
+<li>MIN: Pointing left</li>
+<li>MID: Pointing up</li>
+<li>MAX: Pointing right</li>
+</ul>
+<p>The table above shows each mode&#39;s mapping.</p>
+<p>You can also go to ADVANCED / DIAGNOSTICS / EVENT LOG in the UI to see the real-time value generated by the current mode.</p>
+<p>Optionally, pick a face insert (see below) whose printed MIN/MID/MAX labels match the mode you&#39;ve selected, so the scale on the dial reads correctly. You can also create your own custom face inserts.</p>
+<hr>
+<h2 id="07-face-inserts">07 / FACE INSERTS</h2>
+<p>IDX accepts a swappable, printed face insert behind the needle, so the dial always reads correctly for whatever MODE you&#39;re tracking.</p>
+<h3 id="included-designs">INCLUDED DESIGNS</h3>
+<p>Pre-cut face inserts are provided, which might include things like:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Face insert</th>
+<th align="left">Scale</th>
+<th align="left">Suits</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Percentage</td>
+<td align="left">0 – 100%</td>
+<td align="left">HN Hotness, Home Assistant, generic 0-100 sources</td>
+</tr>
+<tr>
+<td align="left">Relative %</td>
+<td align="left">-5% – +5%</td>
+<td align="left">Stock / Crypto Tracker</td>
+</tr>
+<tr>
+<td align="left">Percentage (fine)</td>
+<td align="left">0 – 100% (20-step)</td>
+<td align="left">Home Assistant, generic 0-100 sources</td>
+</tr>
+<tr>
+<td align="left">12-Hour Clock</td>
+<td align="left">0 – 12 HOUR</td>
+<td align="left">Clock (12h)</td>
+</tr>
+<tr>
+<td align="left">Temperature</td>
+<td align="left">-10°C – 30°C</td>
+<td align="left">Temperature</td>
+</tr>
+<tr>
+<td align="left">Air Quality</td>
+<td align="left">0 – 200 AQI</td>
+<td align="left">Air Quality Index</td>
+</tr>
+<tr>
+<td align="left">Blank</td>
+<td align="left">—</td>
+<td align="left">Custom labelling by hand</td>
+</tr>
+<tr>
+<td align="left">Generic Scale</td>
+<td align="left">0 – 25</td>
+<td align="left">Pomodoro Timer (minutes), custom sources</td>
+</tr>
+</tbody></table>
+<h3 id="downloads">DOWNLOADS</h3>
+<p>Prefer to design your own? Both the pre-designed sheet and a blank template are available as vector (SVG) and print-ready (PDF) files, as a starting point:</p>
+<div class="manual-download">
+
+<p><a href="IDX_inserts_dials_v3.pdf">IDX_inserts_dials_v3.pdf</a> · <a href="IDX_inserts_dials_v3.svg">IDX_inserts_dials_v3.svg</a></p>
+<p><a href="IDX_gauge_inserts_blank_v2.2.pdf">IDX_gauge_inserts_blank_v2.2.pdf</a> · <a href="IDX_gauge_inserts_blank_v2.2.svg">IDX_gauge_inserts_blank_v2.2.svg</a></p>
+</div>
+
+<p>Print on transparent stock (acetate), then cut along the dotted line.</p>
+<h3 id="swapping-a-face-insert">SWAPPING A FACE INSERT</h3>
+<p><strong>Tools required:</strong> 2mm hex key.</p>
+<p><strong>Remove circular faceplate</strong></p>
+<ol>
+<li>Unplug IDX and lay it on its back with the front facing up.</li>
+<li>Unscrew the brass corner fixings on the front, using the 2mm hex key.</li>
+<li>Lift off the clear front window. Hold by the edge to avoid fingerprints. Place somewhere clean.</li>
+<li>Lift off the 10mm clear spacer.</li>
+<li>Lift off the plywood face with the circular cutout.</li>
+</ol>
+<p><strong>Add face insert</strong></p>
+<ol>
+<li>Choose a transparent face insert (gauge scale) and slide it behind the needle hub. The needle axle should fit into the slot.</li>
+<li>Ensure the edge of the face insert is aligned with the edge of the device on the &#39;top&#39; edge.</li>
+</ol>
+<p><strong>Refit gauge faceplate</strong></p>
+<ol>
+<li>Slide the faceplate onto the corner pins.</li>
+<li>Replace the 10mm spacer and front window.</li>
+<li>Refit the brass corner screws loosely.</li>
+<li>Ensure all layers are aligned, then perform final tightening of the corner screws. <strong>Do not overtighten.</strong></li>
+</ol>
+<hr>
+<h2 id="08-ambience">08 / AMBIENCE</h2>
+<p>We recommend long <strong>CYCLE DURATIONS</strong> (e.g., 600 seconds) for maximum calm. A new or factory-reset device runs <strong>Glacial</strong>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Theme</th>
+<th align="left">Effect</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Static</strong></td>
+<td align="left">A single unchanging colour of your choice.</td>
+</tr>
+<tr>
+<td align="left"><strong>Pulse</strong></td>
+<td align="left">Slowly undulating; like breathing.</td>
+</tr>
+<tr>
+<td align="left"><strong>Glacial</strong></td>
+<td align="left">Breathless whites and ice blues.</td>
+</tr>
+<tr>
+<td align="left"><strong>Aurora</strong></td>
+<td align="left">Electromagnetic storms of green and blue.</td>
+</tr>
+<tr>
+<td align="left"><strong>Nebula</strong></td>
+<td align="left">Deep space in blue and purple.</td>
+</tr>
+<tr>
+<td align="left"><strong>Sunset</strong></td>
+<td align="left">Soothing end-of-day colours.</td>
+</tr>
+<tr>
+<td align="left"><strong>Sentiment</strong></td>
+<td align="left">Red (left), Green (right). Best for market trackers and Display. Adjustable.</td>
+</tr>
+<tr>
+<td align="left"><strong>Alert</strong></td>
+<td align="left">White, until a threshold is reached, then red</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="09-advanced-amp-troubleshooting">09 / ADVANCED &amp; TROUBLESHOOTING</h2>
+<ul>
+<li><strong>Pointer Calibration:</strong> If misaligned, set Mode to &quot;Off&quot; and tweak by +/- 10° until pointing at 12 o&#39;clock position.</li>
+<li><strong>Password:</strong> Set your own web interface password (minimum 6 characters). The current password is shown on this page. If forgotten, perform a factory reset to return to <code>idxsetup</code>.</li>
+<li><strong>Timezone:</strong> Adjust to ensure Night Mode operates correctly.</li>
+<li><strong>OTA Updates:</strong> Firmware can be updated via the Advanced page (ElegantOTA); the same login applies. Updates are <strong>not</strong> possible over the setup network — use WiFi or USB.</li>
+<li><strong>Router Down at Boot:</strong> IDX retries its saved WiFi every 60 seconds and restarts itself onto the network once it returns. No action needed.</li>
+</ul>
+<h3 id="factory-reset">FACTORY RESET</h3>
+<p>A factory reset returns IDX to the state it shipped in.</p>
+<p><strong>What it clears</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Setting</th>
+<th align="left">After reset</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">WiFi network and password</td>
+<td align="left">Erased — the setup network reopens</td>
+</tr>
+<tr>
+<td align="left">Web interface password</td>
+<td align="left">Back to <code>idxsetup</code></td>
+</tr>
+<tr>
+<td align="left">API keys and tokens</td>
+<td align="left">Erased</td>
+</tr>
+<tr>
+<td align="left">MODE</td>
+<td align="left">Display</td>
+</tr>
+<tr>
+<td align="left">AMBIENCE</td>
+<td align="left">Glacial</td>
+</tr>
+</tbody></table>
+<p><strong>How to do it</strong></p>
+<p>No tools required — the reset is triggered by power alone.</p>
+<ol>
+<li>Watch the LEDs as the device starts. The first five seconds of every boot are the <strong>WHITE</strong> phase — this is the reset window.</li>
+<li>Unplug the USB-C cable while the LEDs are still white.</li>
+<li>Plug it back in, wait for white, and unplug again.</li>
+<li>Repeat until the LEDs glow <strong>MAGENTA</strong>, which confirms the reset has been triggered. This normally takes three power cycles.</li>
+<li>Leave the device powered. It reboots, zeroes the needle (cyan), flashes deep blue and returns to <strong>Display / Glacial</strong> with the setup network open.</li>
+</ol>
+<p>If you miss the white phase, let the device finish booting and start again. Follow section 03 to put IDX back on your WiFi.</p>
+<h3 id="common-questions">COMMON QUESTIONS</h3>
+<ul>
+<li><strong>&quot;I can&#39;t find the setup network.&quot;</strong> It closes 5 minutes after it was last used. Power-cycle the device to reopen it.</li>
+<li><strong>&quot;It&#39;s asking for a password.&quot;</strong> <code>idx</code> / <code>idxsetup</code>, or whatever you set under ADVANCED.</li>
+<li><strong>&quot;I&#39;ve forgotten my password.&quot;</strong> Perform a factory reset. The password returns to <code>idxsetup</code>.</li>
+<li><strong>&quot;Why can&#39;t I see my API key?&quot;</strong> It is stored but never shown again. Leave the field blank to keep it, or type a new one to replace it.</li>
+<li><strong>&quot;The needle is moving on its own.&quot;</strong> That is Display MODE, the default before setup. Choose another MODE once the device is on WiFi.</li>
+<li><strong>&quot;Can I update the firmware before setting up WiFi?&quot;</strong> No. Use WiFi or USB.</li>
+</ul>
+<hr>
+<h2 id="10-care-amp-maintenance">10 / CARE &amp; MAINTENANCE</h2>
+<ul>
+<li><strong>Cleaning:</strong> Use only a dry microfibre cloth.</li>
+<li><strong>Warning:</strong> <strong>Do not use isopropyl alcohol or glass cleaners</strong>, as they cause &quot;crazing&quot; in the acrylic.</li>
+<li><strong>Hardware:</strong> Periodically check that M3 corner bolts are finger-tight. Do not overtighten.</li>
+<li><strong>Face Inserts:</strong> Printed face inserts may fade in direct sunlight over time; reprint from the supplied files as needed.</li>
+</ul>
+<hr>
+<h2 id="11-developer-specifications">11 / DEVELOPER SPECIFICATIONS</h2>
+<p>IDX is built on an open architecture.</p>
+<ul>
+<li><strong>MCU:</strong> ESP32-C3-MINI-1 (4MB Flash)</li>
+<li><strong>Motor:</strong> X27.168 Stepper Motor</li>
+<li><strong>LEDs:</strong> 6 x WS2812B</li>
+<li><strong>Interface:</strong> USB-C Serial</li>
+</ul>
+<h3 id="gpio-pin-mapping">GPIO PIN MAPPING</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Component</th>
+<th align="left">Function</th>
+<th align="left">ESP32-C3 Pin</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Stepper Motor</td>
+<td align="left">Coil A (1)</td>
+<td align="left">GPIO 00</td>
+</tr>
+<tr>
+<td align="left">Stepper Motor</td>
+<td align="left">Coil A (2)</td>
+<td align="left">GPIO 01</td>
+</tr>
+<tr>
+<td align="left">Stepper Motor</td>
+<td align="left">Coil B (1)</td>
+<td align="left">GPIO 06</td>
+</tr>
+<tr>
+<td align="left">Stepper Motor</td>
+<td align="left">Coil B (2)</td>
+<td align="left">GPIO 07</td>
+</tr>
+<tr>
+<td align="left">RGB LEDs</td>
+<td align="left">Data</td>
+<td align="left">GPIO 08</td>
+</tr>
+<tr>
+<td align="left">Button</td>
+<td align="left">Reset</td>
+<td align="left">GPIO 09</td>
+</tr>
+</tbody></table>
+<h3 id="esphome">ESPHOME</h3>
+<p>IDX supports <a href="https://esphome.io">ESPHome</a> as an alternative firmware, giving full control to Home Assistant.</p>
+<p>The ESPHome configuration files required to build the firmware binary are available at <a href="https://github.com/analoguedeskco/esphome">github.com/analoguedeskco/esphome</a>. Compile these using the ESPHome dashboard or CLI to produce a <code>.bin</code>, then flash via <a href="https://web.esphome.io/">web.esphome.io</a></p>
+<p>Once flashed, IDX appears as a native Home Assistant device — the needle and LEDs are exposed as standard entities and can be driven by any HA automation.</p>
+<p>To switch back to the stock firmware, contact support (see below).</p>
+<hr>
+<p><strong>Support:</strong></p>
+<p><a href="mailto:support@analoguedesk.co">support@analoguedesk.co</a></p>
+
+    </div>
+    <div class="footer">
+        <a href="index.html" class="footer-link">Manuals</a>
+        <br>
+        <span class="footer-copy">&copy; 2026 Analogue Desk Co.</span><br>
+        <a href="mailto:hello@analoguedesk.co" class="footer-email">hello@analoguedesk.co</a>
+    </div>
+</body>
+</html>

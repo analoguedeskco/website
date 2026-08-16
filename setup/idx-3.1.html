@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDX-3.1 Setup | Analogue Desk Co.</title>
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <a href="../index.html">
+        <img src="../images/logo_1_line.png" alt="Analogue Desk Co." class="logo">
+    </a>
+    <h1>IDX-3.1</h1>
+    <p class="subtitle">Owner's Guide</p>
+
+    <p>Thank you for backing independent UK design.</p>
+
+    <h2>Quick Start</h2>
+
+    <div class="step">
+        <strong>1. Power up for the first time</strong>
+        Plug IDX into a standard 5v USB-C power supply using the rear USB socket.
+        <br>
+        <br>
+        IDX will glow white, then cyan as the needle calibrates. The LEDs then flash deep blue for one second — this indicates WiFi is not yet configured.
+        <br>
+        <br>
+        The needle will start walking on its own. This is <code>Display</code> MODE, the factory default. No setup is needed for it to run.
+    </div>
+
+    <div class="step">
+        <strong>2. Connect to temporary WiFi access point</strong>
+        IDX will create a temporary WiFi network for configuration.
+        <br>
+        <br>
+        On your phone or computer, join the WiFi network named <code>IDX-&lt;serial&gt;-setup</code> — for example <code>IDX-3-102-setup</code>. Check the rear of the unit for your Serial Number.
+        <br>
+        <br>
+        Use the password: <code>idxsetup</code>
+        <br>
+        <br>
+        A window should open automatically. If not, visit <a href="http://192.168.4.1">http://192.168.4.1</a> in your browser.
+        <br>
+        <br>
+        <span style="color: #bbb; font-size: 0.85rem;">
+            <strong>Note:</strong> the setup network closes after 5 minutes if unused, as a security precaution. To reopen it, unplug IDX and plug it back in.
+        </span>
+    </div>
+
+    <div class="step">
+        <strong>3. Configure WiFi</strong>
+        In the IDX WiFi Setup page, once the WiFi scanning has completed, select your SSID from the list and enter your WiFi password. Click Connect.
+        <br>
+        <br>
+        The setup page will then show the device's local address, along with the login details you'll need in step 4.
+        <br>
+        <br>
+        This address is used to access the IDX Dashboard where you can configure the data source, ambient lighting and other settings.
+        <br>
+        <br>
+        Copy the address, then finish setup. IDX restarts onto your own network.
+    </div>
+
+    <div class="step">
+        <strong>4. Access IDX Dashboard</strong>
+        Ensure your phone/computer is back on your main WiFi network.
+        <br>
+        <br>
+        Wait 30 seconds for IDX to complete its initialisation.
+        <br>
+        <br>
+        Visit the copied address in your browser. The dashboard asks for a login — the username is <code>idx</code> and the default password is <code>idxsetup</code>. You can set your own password later under <code>ADVANCED</code>.
+        <br>
+        <br>
+        <span style="color: #bbb; font-size: 0.85rem;">
+            <strong>Backup Option:</strong> If the address is not found, locate IDX's assigned IP address using your router admin page or a network scanner (like <a href="https://www.fing.com/">Fing</a>). Look for "IDX" or "Espressif". Enter it into a browser address bar.
+        </span>
+    </div>
+
+    <div class="step">
+        <strong>5. Configure IDX</strong>
+        Out of the box, IDX runs <code>Display</code> MODE — the needle walks the dial with no data source. Now that you're on WiFi, you can choose a data source instead.
+        <br>
+        <br>
+        Select <code>MODE</code> to choose what data source IDX should use.
+        Select <code>AMBIENCE</code> to adjust the lighting effect, including night mode.
+    </div>
+
+    <div class="step">
+        <strong>6. Fit a face insert</strong>
+        IDX's dial face accepts a swappable, printed face insert so the scale matches your chosen <code>MODE</code>.
+        <br>
+        <br>
+        See the Full IDX-3.1 Manual below for the included designs and swap instructions.
+    </div>
+
+
+    <a href="../manual/IDX-3.1_User_Manual.html" class="btn">View Full IDX-3.1 Manual</a>
+
+    <div class="footer">
+        <a href="index.html" class="footer-link">Setup</a>
+        <a href="../index.html" class="footer-link" style="margin-left: 20px;">Home</a>
+        <br>
+        <span style="text-transform: uppercase;">&copy; 2026 Analogue Desk Co.</span> <br>
+        <a href="mailto:hello@analoguedesk.co" style="color:#999;">hello@analoguedesk.co</a>
+    </div>
+</body>
+</html>
