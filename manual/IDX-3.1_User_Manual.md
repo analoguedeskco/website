@@ -3,7 +3,7 @@
 **Model:** IDX-3.1  
 **Serial Number:** IDX-3-1xx  
 **Firmware:** 6.x  
-**Date:** 2026-08-16
+**Date:** 2026-08-24
 
 ![IDX](../images/IDX-3%20Sanctuary%20Front%20Scale.jpg)
 
@@ -84,9 +84,13 @@ The web interface requires a login.
 | **Username** | `idx` (always) |
 | **Password** | `idxsetup`     |
 
-You can set your own password under **ADVANCED** (minimum 6 characters). The current password is shown on that page. If you forget it, a factory reset returns the device's password to `idxsetup`.
+You can set your own password under **ADVANCED** (6 to 64 characters). The current password is shown on that page. If you forget it, a factory reset returns the device's password to `idxsetup`.
+
+Spaces are stored exactly as typed, so a password ending in a space needs that space to sign in.
 
 **What the login protects.** The default password is the same on every device and is printed here, so treat it as public. It stops casual and accidental access, but it is not protection from someone who knows the product. If IDX shares a network with people you don't know, set your own password.
+
+**Repeated wrong passwords lock the interface.** Five incorrect passwords in a row lock sign-in for 30 seconds, after which it unlocks on its own — there is nothing to reset. The lock applies to the device rather than to your browser, so if someone else on the network is guessing, you wait alongside them. The gauge keeps running its MODE throughout; only the web interface is affected.
 
 ### API KEYS & TOKENS
 
@@ -95,6 +99,7 @@ Keys and tokens (CoinMarketCap, Finnhub, Home Assistant) are never sent back to 
 - **Leave the field blank to keep the stored key.** You do not need to re-enter it to change other settings on the page.
 - **A stored key cannot be viewed again.** Keep your own copy.
 - **A stored key cannot be cleared from the interface, only replaced.** A factory reset is the only way to remove one.
+- **Paste freely.** Spaces and line breaks around a saved value are removed. A Home Assistant token copied from the Home Assistant interface often carries a trailing newline; it will work as pasted.
 
 ---
 
@@ -119,7 +124,7 @@ Each MODE provides a mapping from its value to a 0-1 range, which defines the po
 | 24-hour Sweep             | 10.00     | 12.00     | 23.59     | Sweeps through 180 degrees in 24h                                                                                                  |
 | Finnhub Stock Tracker     | -5%       | 0%        | +5%       | Relative 24h price change; centre is no change.                                                                                    |
 | HN Hotness                | 0%        | 50%       | 100%      | Hacker News front-page hotness — #1 story score against a maximum value (500 points by default). Pairs with the 0–100 face insert. |
-| Home Assistant            | 0         | 50        | 100       | Maps any numeric entity state from your local Homa Assistant instance. For indoor temperature, choose a range like 9-25C           |
+| Home Assistant            | 0         | 50        | 100       | Maps any numeric entity state from your local Home Assistant instance. For indoor temperature, choose a range like 9-25C           |
 | Pomodoro Timer            | 0         | 12m30s    | 25m       | Focus sweep toward task completion (counts down). Minutes.                                                                         |
 | Temperature               | -10C      | 15C       | 40C       | Maps a OpenMeteo temperature report for your city location.                                                                        |
 
@@ -237,7 +242,7 @@ We recommend long **CYCLE DURATIONS** (e.g., 600 seconds) for maximum calm. A ne
 ## 09 / ADVANCED & TROUBLESHOOTING
 
 - **Pointer Calibration:** If misaligned, set Mode to "Off" and tweak by +/- 10° until pointing at 12 o'clock position.
-- **Password:** Set your own web interface password (minimum 6 characters). The current password is shown on this page. If forgotten, perform a factory reset to return to `idxsetup`.
+- **Password:** Set your own web interface password (6 to 64 characters). The current password is shown on this page. If forgotten, perform a factory reset to return to `idxsetup`.
 - **Timezone:** Adjust to ensure Night Mode operates correctly.
 - **OTA Updates:** Firmware can be updated via the Advanced page (ElegantOTA); the same login applies. Updates are **not** possible over the setup network — use WiFi or USB.
 - **Router Down at Boot:** IDX retries its saved WiFi every 60 seconds and restarts itself onto the network once it returns. No action needed.
@@ -273,6 +278,8 @@ If you miss the white phase, let the device finish booting and start again. Foll
 - **"I can't find the setup network."** It closes 5 minutes after it was last used. Power-cycle the device to reopen it.
 - **"It's asking for a password."** `idx` / `idxsetup`, or whatever you set under ADVANCED.
 - **"I've forgotten my password."** Perform a factory reset. The password returns to `idxsetup`.
+- **"It says too many failed sign-in attempts."** Five wrong passwords in a row lock sign-in for 30 seconds. Wait, then try again.
+- **"A page said the device could not save my settings."** That is a genuine storage fault, not a cosmetic one. Nothing was changed and the previous setting — including your existing password — is still in use. Power-cycle the device and try again; if it repeats, contact support.
 - **"Why can't I see my API key?"** It is stored but never shown again. Leave the field blank to keep it, or type a new one to replace it.
 - **"The needle is moving on its own."** That is Display MODE, the default before setup. Choose another MODE once the device is on WiFi.
 - **"Can I update the firmware before setting up WiFi?"** No. Use WiFi or USB.

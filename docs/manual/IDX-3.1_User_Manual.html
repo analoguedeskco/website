@@ -15,7 +15,7 @@
     </a>
     <div class="manual-content">
 <h1 id="idx-3-1-user-manual">IDX-3.1 / User Manual</h1>
-<p><strong>Model:</strong> IDX-3.1<br><strong>Serial Number:</strong> IDX-3-1xx<br><strong>Firmware:</strong> 6.x<br><strong>Date:</strong> 2026-08-16</p>
+<p><strong>Model:</strong> IDX-3.1<br><strong>Serial Number:</strong> IDX-3-1xx<br><strong>Firmware:</strong> 6.x<br><strong>Date:</strong> 2026-08-24</p>
 <p><img src="../images/IDX-3%20Sanctuary%20Front%20Scale.jpg" alt="IDX"></p>
 <hr>
 <h2 id="01-the-concept">01 / THE CONCEPT</h2>
@@ -89,14 +89,17 @@
 <td align="left"><code>idxsetup</code></td>
 </tr>
 </tbody></table>
-<p>You can set your own password under <strong>ADVANCED</strong> (minimum 6 characters). The current password is shown on that page. If you forget it, a factory reset returns the device&#39;s password to <code>idxsetup</code>.</p>
+<p>You can set your own password under <strong>ADVANCED</strong> (6 to 64 characters). The current password is shown on that page. If you forget it, a factory reset returns the device&#39;s password to <code>idxsetup</code>.</p>
+<p>Spaces are stored exactly as typed, so a password ending in a space needs that space to sign in.</p>
 <p><strong>What the login protects.</strong> The default password is the same on every device and is printed here, so treat it as public. It stops casual and accidental access, but it is not protection from someone who knows the product. If IDX shares a network with people you don&#39;t know, set your own password.</p>
+<p><strong>Repeated wrong passwords lock the interface.</strong> Five incorrect passwords in a row lock sign-in for 30 seconds, after which it unlocks on its own — there is nothing to reset. The lock applies to the device rather than to your browser, so if someone else on the network is guessing, you wait alongside them. The gauge keeps running its MODE throughout; only the web interface is affected.</p>
 <h3 id="api-keys-amp-tokens">API KEYS &amp; TOKENS</h3>
 <p>Keys and tokens (CoinMarketCap, Finnhub, Home Assistant) are never sent back to your browser once saved. The field reads <em>&quot;Saved — leave blank to keep&quot;</em> instead of showing the value.</p>
 <ul>
 <li><strong>Leave the field blank to keep the stored key.</strong> You do not need to re-enter it to change other settings on the page.</li>
 <li><strong>A stored key cannot be viewed again.</strong> Keep your own copy.</li>
 <li><strong>A stored key cannot be cleared from the interface, only replaced.</strong> A factory reset is the only way to remove one.</li>
+<li><strong>Paste freely.</strong> Spaces and line breaks around a saved value are removed. A Home Assistant token copied from the Home Assistant interface often carries a trailing newline; it will work as pasted.</li>
 </ul>
 <hr>
 <h2 id="06-mode">06 / MODE</h2>
@@ -182,7 +185,7 @@
 <td align="left">0</td>
 <td align="left">50</td>
 <td align="left">100</td>
-<td align="left">Maps any numeric entity state from your local Homa Assistant instance. For indoor temperature, choose a range like 9-25C</td>
+<td align="left">Maps any numeric entity state from your local Home Assistant instance. For indoor temperature, choose a range like 9-25C</td>
 </tr>
 <tr>
 <td align="left">Pomodoro Timer</td>
@@ -378,7 +381,7 @@
 <h2 id="09-advanced-amp-troubleshooting">09 / ADVANCED &amp; TROUBLESHOOTING</h2>
 <ul>
 <li><strong>Pointer Calibration:</strong> If misaligned, set Mode to &quot;Off&quot; and tweak by +/- 10° until pointing at 12 o&#39;clock position.</li>
-<li><strong>Password:</strong> Set your own web interface password (minimum 6 characters). The current password is shown on this page. If forgotten, perform a factory reset to return to <code>idxsetup</code>.</li>
+<li><strong>Password:</strong> Set your own web interface password (6 to 64 characters). The current password is shown on this page. If forgotten, perform a factory reset to return to <code>idxsetup</code>.</li>
 <li><strong>Timezone:</strong> Adjust to ensure Night Mode operates correctly.</li>
 <li><strong>OTA Updates:</strong> Firmware can be updated via the Advanced page (ElegantOTA); the same login applies. Updates are <strong>not</strong> possible over the setup network — use WiFi or USB.</li>
 <li><strong>Router Down at Boot:</strong> IDX retries its saved WiFi every 60 seconds and restarts itself onto the network once it returns. No action needed.</li>
@@ -429,6 +432,8 @@
 <li><strong>&quot;I can&#39;t find the setup network.&quot;</strong> It closes 5 minutes after it was last used. Power-cycle the device to reopen it.</li>
 <li><strong>&quot;It&#39;s asking for a password.&quot;</strong> <code>idx</code> / <code>idxsetup</code>, or whatever you set under ADVANCED.</li>
 <li><strong>&quot;I&#39;ve forgotten my password.&quot;</strong> Perform a factory reset. The password returns to <code>idxsetup</code>.</li>
+<li><strong>&quot;It says too many failed sign-in attempts.&quot;</strong> Five wrong passwords in a row lock sign-in for 30 seconds. Wait, then try again.</li>
+<li><strong>&quot;A page said the device could not save my settings.&quot;</strong> That is a genuine storage fault, not a cosmetic one. Nothing was changed and the previous setting — including your existing password — is still in use. Power-cycle the device and try again; if it repeats, contact support.</li>
 <li><strong>&quot;Why can&#39;t I see my API key?&quot;</strong> It is stored but never shown again. Leave the field blank to keep it, or type a new one to replace it.</li>
 <li><strong>&quot;The needle is moving on its own.&quot;</strong> That is Display MODE, the default before setup. Choose another MODE once the device is on WiFi.</li>
 <li><strong>&quot;Can I update the firmware before setting up WiFi?&quot;</strong> No. Use WiFi or USB.</li>
