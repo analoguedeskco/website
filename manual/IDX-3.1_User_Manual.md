@@ -75,6 +75,8 @@ Access the internal dashboard via your web browser to customize your device.
    - **AMBIENCE:** Modify LED effects and night mode.
    - **ADVANCED:** Diagnostics and reset options.
 
+> **Note:** If the page doesn't load, refresh the browser or try again in a few seconds. IDX has a low power processor which can take a few tries to wake up.
+
 ### SIGNING IN
 
 The web interface requires a login.
